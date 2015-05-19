@@ -1,0 +1,114 @@
+#!/bin/bash -x
+#==================================================#
+# SETUP GEOSERVER
+#==================================================#
+# USE
+#
+# sudo ./destroy  # kills any old dbases
+# opt 1)
+# sudo ./install -u <username> -p <password> -b <git-branch-name> -h <hostname> -path <install-path>
+# opt 2)
+# sudo ./install -f <credential file>
+# opt 3)
+# sudo ./install # defaults to looking in ~/.catami.cred
+#
+# CREDENTIAL FILE
+# LINE 1 #Comment
+# LINE 2 <username>
+# LINE 3 <password>
+#
+#==================================================#
+#
+# Script needs to be run from the benthobox project path i.e ./install/install_geoserver
+#
+
+
+#revision argument
+
+set -eux
+
+SERVER="http://$(echo $(hostname -I))"
+CREDFILE="~/.catami.cred"
+CURRENT_DIR=$(pwd)
+SCRIPT_PATH="$(dirname "$(which "$0")")"
+
+#==================================================#
+# GRAB THE U_NAME AND PASSWORD
+#==================================================#
+OPTFIND=1
+U_NAME=""
+PASSWORD=""
+
+while getopts "u:p:h:" opt; do
+    case "$opt" in
+    u)
+        U_NAME=$OPTARG
+        ;;
+    p)
+        PASSWORD=$OPTARG
+        ;;
+    h)
+        SERVER=$OPTARG
+        ;;
+    esac
+done
+
+shift $((OPTFIND-1))
+
+if [ -z ${U_NAME} ] # if no user variable must be passed credfile
+then
+
+    USER_HOME=$(eval echo ~${SUDO_USER})
+    echo "expecting credential file in :: "${USER_HOME}
+    i=0
+    while read line; do
+        param[$i]=$line
+        i=`expr $i + 1`
+    done < $CREDFILE
+
+    U_NAME=${param[1]}
+    PASSWORD=${param[2]}
+fi
+
+echo "user=$U_NAME, password=$PASSWORD, path=$PATH"
+
+echo 'Setting up geoserver'
+
+#Check if geoserver is already on here, if not then download it
+if [ -a "geoserver-2.2.4-war.zip" ]
+then
+    echo 'geoserver-2.2.4.zip found, skipping download'
+else
+    echo 'Downloading geoserver'
+    wget http://downloads.sourceforge.net/project/geoserver/GeoServer/2.2.4/geoserver-2.2.4-war.zip
+fi
+
+#stop tomcat, so we can make some adjustments
+service tomcat7 stop
+
+#put geoserver into tomcat
+unzip -o geoserver-2.2.4-war.zip 
+unzip -o geoserver.war -d geoserver 
+sudo mv geoserver /var/lib/tomcat7/webapps/
+
+# sed replace the username and password in datastore-config.xml
+sed -i "s@the_username@$U_NAME@g" $SCRIPT_PATH/geoserver-config/catami/catamidb/datastore.xml
+sed -i "s@the_password@$PASSWORD@g" $SCRIPT_PATH/geoserver-config/catami/catamidb/datastore.xml
+
+# relace the host with given host
+sed -i "s@the_host@$SERVER@g" $SCRIPT_PATH/geoserver-config/catami/catamidb/datastore.xml
+
+#copy the config over to geoserver, and make tomcat the owner
+sudo cp -r $SCRIPT_PATH/geoserver-config/catami /var/lib/tomcat7/webapps/geoserver/data/workspaces/
+chown -R tomcat7 /var/lib/tomcat7/webapps
+chgrp -R tomcat7 /var/lib/tomcat7/webapps
+
+#change username and password for admin
+# look in /var/lib/tomcat7/webapps/geoserver/data/security
+sed -i "s@admin=geoserver@$U_NAME=$PASSWORD@g" /var/lib/tomcat7/webapps/geoserver/data/security/users.properties
+
+echo 'Restarting tomcat'
+sudo service tomcat7 restart
+
+echo 'Restarting apache'
+sudo service apache2 restart

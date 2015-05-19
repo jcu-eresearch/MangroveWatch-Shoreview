@@ -1,0 +1,6 @@
+#==================================================#
+# REMOVE TOMCAT AND GEOSERVER
+#==================================================#
+sudo service tomcat7 stop
+sudo rm -r /var/lib/tomcat7/webapps/dolly
+sudo rm -r /var/lib/tomcat7/webapps/dolly.war

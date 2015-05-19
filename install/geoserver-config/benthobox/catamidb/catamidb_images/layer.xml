@@ -1,0 +1,15 @@
+<layer>
+  <name>catamidb_images</name>
+  <id>LayerInfoImpl--7160d3b9:14b5331d86f:-7fc9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-45fae3b1:13fb24b201d:-4a3a</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--7160d3b9:14b5331d86f:-7fca</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    {% block lead_head %}{% endblock %}
+    <title>{% block title %}ShoreView{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/jquery.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/colorbox/colorbox.css" />
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/css/custom-theme/bootstrap-yeti-theme.css" type="text/css"/>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/typeahead/typeahead.js-bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/plugins/popover-extra-placements.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/plugins/datepicker.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/font-awesome-4.2.0/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/pnotify/jquery.pnotify.default.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/topmenu.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/custom-nav.css" />
+
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/typeahead/typeahead.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/backbone/underscore.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/backbone/backbone.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/backbone/backbone-tastypie.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/backbone/backbone-validation-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/backbone/backbone.validation.bootstrap.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/catamiUtils.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/plugins/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/js/spin.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/pnotify/jquery.pnotify.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery.cookie/jquery.cookie.js"></script>
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}lib/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="{{ STATIC_URL }}lib/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="{{ STATIC_URL }}lib/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="{{ STATIC_URL }}lib/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}lib/ico/apple-touch-icon-57-precomposed.png">
+
+    {% block tail_head %}{% endblock %}
+    
+  <script type='text/javascript'>
+     $(document).ready(function () {
+         $("[rel=tooltip]").tooltip({container: 'body'});
+       });
+
+  </script>
+</head>
+
+<body class="claro">
+
+<!--
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">BenthoBox</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown {% ifequal request.path "/campaigns" %}active{% endifequal %}">
+                    <a href="{% url "webinterface.views.campaign_list" %}"><i class="icon-list-alt "></i> Campaigns</a>
+
+                <li class="dropdown {% ifequal request.path "/deployments" %}active{% endifequal %}">
+                    <a href="{% url "webinterface.views.deployment_list" %}"><i class="icon-list-alt "></i> Deployments</a>
+
+                <li class="dropdown {% ifequal request.path "/projects" %}active{% endifequal %}">
+                    <a href="{% url "webinterface.views.projects" %}"><i class="icon-list-alt "></i> Projects</a>
+
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            {% if user.is_authenticated %}
+                    <a href="/logout/" class="btn btn-primary navbar-btn pull-right" role="button"> Sign Out</a>
+                    <p class="navbar-text pull-right"><i class="icon-user "></i> Logged in as <a
+                            href="#"> {{ user.username }} </a>&nbsp;</p>
+                {% else %}
+                    <a href="/accounts/signin/" role="button" class="btn pull-right navbar-btn"
+                       data-toggle="modal" role="button">Sign In</a>
+                    <p class="navbar-text pull-right"><i class="icon-user "></i> Welcome visitor! <a
+                            href="#"> {{ user.username }} </a>&nbsp;</p>
+                {% endif %}
+
+        </div>
+    </div>
+</nav>
+-->
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ShoreView</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown {% ifequal request.path "/data/campaigns/" %}active{% endifequal %}">
+            <a href="{% url "webinterface.views.campaign_list" %}"><i class="icon-list-alt "></i> Campaigns</a>
+        </li>
+        <li class="dropdown {% ifequal request.path "/data/deployments/" %}active{% endifequal %}">
+            <a href="{% url "webinterface.views.deployment_list" %}"><i class="icon-list-alt "></i> Deployments</a>
+        </li>
+        <li class="dropdown {% ifequal request.path "/projects/" %}active{% endifequal %}">
+            <a href="{% url "webinterface.views.projects" %}"><i class="icon-list-alt "></i> Projects</a>
+        </li>
+        <!--<li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>-->
+      </ul>
+
+        <form class="navbar-form navbar-right" >
+        {% if user.is_authenticated %}
+            <a href="/logout/" class="btn btn-success navbar-btn" role="button"> Sign Out </a>
+        {% else %}
+            <a href="/accounts/signin/" role="button" class="btn btn-success navbar-btn" data-toggle="modal" role="button">Sign In</a>
+
+        {% endif %}
+        </form>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        {% if user.is_authenticated %}
+            <li>
+            <p> <i class="icon-user"></i>  <a class="navbar-text" href="/accounts/{{ user.username }}"> Logged in as {{ user.username }} </a> </p>
+            </li>
+        {% else %}
+            <li>
+                <p class="navbar-text pull-right"><i class="icon-user "></i> Welcome visitor! <a
+                    href="#"> {{ user.username }} </a>&nbsp;</p>
+            </li>
+        {% endif %}
+
+      </ul>
+
+
+
+
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+        -->
+    </div>
+  </div>
+</nav>
+
+<!-- navbar navbar-inverse navbar-fixed-top -->
+
+
+<div class="container-fluid">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- Data Task Modal -->
+<div id="TaskModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="TaskModalLabel"
+     aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Select Context-relevant Options</h3>
+    </div>
+    <div class="modal-body">
+        <p>The idea of these Data Tasks are to provide a user-centric, task oriented interface.</p>
+
+        <p>Each of the Data Tasks will be activated according to context.</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/plugins/popover-extra-placements.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/jquery.shorten.1.0.js"></script>
+
+
+{% block add_script %}{% endblock %}
+
+
+<!-- popover js -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("[rel=tooltip]").tooltip();
+        $("[rel=popover-roll]").popover({ trigger: "hover" });
+        $("[rel=popover]").popover();
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                function getCookie(name) {
+                    var cookieValue = null;
+                    if (document.cookie && document.cookie != '') {
+                        var cookies = document.cookie.split(';');
+                        for (var i = 0; i < cookies.length; i++) {
+                            var cookie = jQuery.trim(cookies[i]);
+                            // Does this cookie string begin with the name we want?
+                            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                break;
+                            }
+                        }
+                    }
+                    return cookieValue;
+                }
+                if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                    // Only send the token to relative URLs i.e. locally.
+                    xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                }
+            }
+        });
+    });
+
+
+    // Activate tabs and modals from anchor in url links
+    if (window.location.hash.length > 0) {
+        if ($(window.location.hash).hasClass('tab-pane')) {
+            $('ul.nav-tabs > li > a[href="' + window.location.hash + '"]').tab('show');
+        } else if ($(window.location.hash).hasClass('modal')) {
+            $(window.location.hash).modal('show');
+        }
+    }
+
+    /**
+     * Function to display notifications to the user.
+     *
+     * @param title : title of the note (string)
+     * @param msg   : message to display (string)
+     * @param type  : type (string, optional, values: 'success' | ['info'] | 'error')
+     * @param hide  : whether or not to auto hide (bool, optional, vals: true | [false])
+     */
+    function show_note(title,msg,type,hide) {
+        type = ((typeof type !== 'undefined') ? type : 'info');
+        hide = ((typeof hide !== 'undefined') ? hide : false);
+        $.pnotify({
+            title: title,
+            text: msg,
+            type: type, // success | info | error
+            hide: hide,
+            icon: false,
+            history: false,
+            sticker: false
+        });
+    }
+
+</script>
+
+</body>
+</html>

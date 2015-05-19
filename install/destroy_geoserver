@@ -1,0 +1,13 @@
+#==================================================#
+# REMOVE TOMCAT AND GEOSERVER
+#==================================================#
+sudo service tomcat7 stop
+sudo rm -r /var/lib/tomcat7/webapps/geoserver
+sudo rm -r /var/lib/tomcat7/webapps/geoserver.war
+#sudo apt-get remove --purge tomcat
+sudo service tomcat7 start
+
+#bug fix -- not sure why need this twice
+#su postgres -c "dropuser pocock"
+
+#service tomcat7 start

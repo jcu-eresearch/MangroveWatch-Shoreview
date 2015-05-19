@@ -1,0 +1,67 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--65045aeb:14b5384b03d:-7ffe</id>
+  <name>annotationset_images</name>
+  <nativeName>annotationset_images</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--476b19ba:13f885da7ca:-7feb</id>
+  </namespace>
+  <title>annotationset_images</title>
+  <keywords>
+    <string>annotationset_images</string>
+    <string>features</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>113.879608</minx>
+    <maxx>113.889244</maxx>
+    <miny>-22.10115099</miny>
+    <maxy>-22.09576797</maxy>
+    <crs>EPSG:4326</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>113.879608</minx>
+    <maxx>113.889244</maxx>
+    <miny>-22.10115099</miny>
+    <maxy>-22.09576797</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, 
+  DATUM[&quot;WGS84&quot;, 
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>annotationset_images</name>
+        <sql>select catamidb_image.id, catamidb_image.position, projects_annotationset_images.annotationset_id, catamidb_measurement.value from projects_annotationset_images, catamidb_image, catamidb_measurement where projects_annotationset_images.image_id=catamidb_image.id and catamidb_image.id=catamidb_measurement.image_id and catamidb_measurement.measurement_type=&apos;depth&apos;
+</sql>
+        <escapeSql>false</escapeSql>
+        <keyColumn>id</keyColumn>
+        <geometry>
+          <name>position</name>
+          <type>Point</type>
+          <srid>4326</srid>
+        </geometry>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--476b19ba:13f885da7ca:-7fea</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+</featureType>

@@ -1,0 +1,126 @@
+{% extends "base-topmenu.html" %}
+{% block tail_head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/OpenLayers/map-extras.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class=''>
+<ul class="breadcrumb">
+    <li class="active">Campaign List</li>
+</ul>
+
+<div id="CampaignListContainer"></div>
+</div>
+<script type="text/template" id="CampaignListTemplate">
+    <div id='campaign-map' style="height: 300px; width:100%; border: 2px">
+    </div>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Deployments</th>
+            <th>Researchers</th>
+            <th>Publications</th>
+            <th>Grant</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%=campaigns%>
+    </tbody>
+</table>
+
+<div id="pagination"></div>
+
+</script>
+
+<script type="text/template" id="CampaignTemplate">
+    <tr>
+        <td><a href="<%= campaign_url %>"><%= short_name %></a></td>
+        <td><%= start_date %></td>
+        <td><%= end_date %></td>
+        <td><%= deployment_count %></td>
+        <td><%= researchers %></td>
+        <td><%= publications %></td>
+        <td><%= grant %></td>
+        <td><%= description %></td>
+    </tr>
+</script>
+
+{% endblock %}
+
+{% block add_script %}
+<!--<script src="{{ STATIC_URL }}lib/OpenLayers/OpenLayers.js"></script>-->
+<script type="text/javascript" src="http://openlayers.org/api/2.13.1/OpenLayers.js"></script>
+
+<script src="{{ STATIC_URL }}lib/OpenLayers/LoadingPanel.js"></script>
+<script src="{{ STATIC_URL }}js/MapUtils.js"></script>
+
+<script type="text/javascript">
+    //Init js variables which is used by Backbone to render html template
+    var CampaignListUrl = "{% url "webinterface.views.campaign_list" %}"
+    var WMS_URL = "{{ WMS_URL }}";
+    var LAYER_CAMPAIGNS = "{{ LAYER_CAMPAIGNS }}";
+</script>
+
+<script language="javascript">
+
+    $.fn.truncate = function(options) {
+
+        var defaults = {
+            length: 300,
+            minTrail: 20,
+            moreText: "more",
+            lessText: "less",
+            ellipsisText: "..."
+        };
+
+        var options = $.extend(defaults, options);
+
+        return this.each(function() {
+            obj = $(this);
+            //alert(options.minTrail);
+            var body = obj.html();
+            if (body.length > options.length + options.minTrail) {
+                var splitLocation = body.indexOf(' ', options.length);
+                if (splitLocation != -1) {
+                    // truncate tip
+                    var splitLocation = body.indexOf(' ', options.length);
+                    var str1 = body.substring(0, splitLocation);
+                    var str2 = body.substring(splitLocation, body.length - 1);
+                    obj.html(str1 + '<span class="truncate_ellipsis">' + options.ellipsisText +
+                        '</span>' + '<span  class="truncate_more">' + str2 + '</span>');
+                    obj.find('.truncate_more').css("display", "none");
+                    // insert more link
+                    obj.append(
+                        '<div class="clearboth">' +
+                        '<a href="#" class="truncate_more_link">' + options.moreText + '</a>' +
+                        '</div>'
+                    );
+                    var moreLink = $('.truncate_more_link', obj);
+                    var moreContent = $('.truncate_more', obj);
+                    var ellipsis = $('.truncate_ellipsis', obj);
+                    moreLink.click(function() {
+                        if (moreLink.text() == options.moreText) {
+                            moreContent.show('normal');
+                            moreLink.text(options.lessText);
+                            ellipsis.css("display", "none");
+                        } else {
+                            moreContent.hide('normal');
+                            moreLink.text(options.moreText);
+                            ellipsis.css("display", "inline");
+                        }
+                        return false;
+                    });
+                }
+            }
+        });
+    };
+
+</script>
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/campaignlist.js"></script>
+
+{% endblock %}

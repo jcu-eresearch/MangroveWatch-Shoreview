@@ -1,0 +1,16 @@
+<layer>
+  <name>project_images</name>
+  <id>LayerInfoImpl-237a0e9:14b537e565a:-7ffc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-45fae3b1:13fb24b201d:-4a3a</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-237a0e9:14b537e565a:-7ffd</id>
+  </resource>
+  <opaque>true</opaque>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

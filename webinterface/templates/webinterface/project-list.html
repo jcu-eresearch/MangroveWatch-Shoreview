@@ -1,0 +1,48 @@
+{% extends "base-topmenu.html" %}
+{% block title %}BenthoBox - Project List {% endblock %}
+
+
+{% block content %}
+
+    <div id="ProjectListContainer" class=""></div>
+    <div id="pagination"></div>
+
+    <script type="text/template" id="ProjectListTemplate">
+        <ul class="breadcrumb">
+            <li><a href="/projects/">Projects</a></li>
+        </ul>
+
+        {% if user.is_authenticated %}
+        <p>
+        <button class="btn btn-large btn-primary " type="button" id="create_button" ><i class="icon-plus"></i> Create New Project</button>
+        <!--<button class="btn btn-large " type="button" id="import_button" ><i class="icon-upload"></i> Import Project</button>-->
+        </p>
+        {% endif %}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Owner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%=projects%>
+            </tbody>
+        </table>
+
+    </script>
+
+    <script type="text/template" id="ProjectTemplate">
+        <tr>
+            <td><a href="<%= id %>"><%= name %></a></td>
+            <td><%= description %></td>
+            <td><%= owner %></td>
+        </tr>
+    </script>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/js/catamiUtil.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-list-view.js"></script>
+
+{% endblock %}

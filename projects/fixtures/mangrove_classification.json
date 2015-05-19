@@ -1,0 +1,2850 @@
+[
+  {
+    "pk": null,
+    "model": "projects.AnnotationSchemes",
+    "fields": {
+      "owner": null,
+      "name": "Mangrove Watch Classification",
+      "version": "1.0"
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Mangroves Present Absent:Mangrove",
+      "code_name": "Mangrove",
+      "category_name": "Mangrove Assessment Criteria:Mangroves Present Absent",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Mangroves Present Absent:No Mangrove",
+      "code_name": "No Mangrove",
+      "category_name": "Mangrove Assessment Criteria:Mangroves Present Absent",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Components:Dominant Canopy",
+      "code_name": "Dominant Canopy",
+      "category_name": "Mangrove Assessment Criteria:Components",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Components:Fringe Edge",
+      "code_name": "Fringe Edge",
+      "category_name": "Mangrove Assessment Criteria:Components",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Components:Emergent Trees",
+      "code_name": "Emergent Trees",
+      "category_name": "Mangrove Assessment Criteria:Components",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Components:Saplings",
+      "code_name": "Saplings",
+      "category_name": "Mangrove Assessment Criteria:Components",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Components:Seedlings",
+      "code_name": "Seedlings",
+      "category_name": "Mangrove Assessment Criteria:Components",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Species:Aridopses",
+      "code_name": "Aridopses",
+      "category_name": "Mangrove Assessment Criteria:Species",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Species:Something else",
+      "code_name": "Something else",
+      "category_name": "Mangrove Assessment Criteria:Species",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density:Scattered Clumps",
+      "code_name": "Scattered Clumps",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density:Sparse",
+      "code_name": "Sparse",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density:Open",
+      "code_name": "Open",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density:Open-Continuous",
+      "code_name": "Open-Continuous",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density:Closed-Continuous",
+      "code_name": "Closed-Continuous",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height:Very Short <2m",
+      "code_name": "Very Short <2m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height:Short 2 -<8m",
+      "code_name": "Short 2 -<8m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height:Moderate 8 -<15m",
+      "code_name": "Moderate 8 -<15m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height:Tall 15-20m",
+      "code_name": "Tall 15-20m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height:Very Tall 20m plus",
+      "code_name": "Very Tall 20m plus",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Upper Canopy:Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density:Scattered Clumps",
+      "code_name": "Scattered Clumps",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density:Sparse",
+      "code_name": "Sparse",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density:Open",
+      "code_name": "Open",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density:Open-Continuous",
+      "code_name": "Open-Continuous",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density:Closed-Continuous",
+      "code_name": "Closed-Continuous",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy:Stem Density",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height:Very Short <2m",
+      "code_name": "Very Short <2m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height:Short 2 -<8m",
+      "code_name": "Short 2 -<8m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height:Moderate 8 -<15m",
+      "code_name": "Moderate 8 -<15m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height:Tall 15-20m",
+      "code_name": "Tall 15-20m",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height:Very Tall 20m plus",
+      "code_name": "Very Tall 20m plus",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Fringe Canopy: Canopy Height",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness:Open, High PLaces",
+      "code_name": "Open, High PLaces",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness:Little High ~25%",
+      "code_name": "Little High ~25%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness:Come, halfway down ~50%",
+      "code_name": "Come, halfway down ~50%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness:Most, bases discernable ~75%",
+      "code_name": "Most, bases discernable ~75%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness:All, from crown to ground",
+      "code_name": "All, from crown to ground",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Canopy Openness",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m):Sparse <10%",
+      "code_name": "Sparse <10%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m)",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m):Low 10 -<30%",
+      "code_name": "Low 10 -<30%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m)",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m):Moderate 30 -<60%",
+      "code_name": "Moderate 30 -<60%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m)",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m):Dense 60 -<90%",
+      "code_name": "Dense 60 -<90%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m)",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m):Very Dense 90 plus %",
+      "code_name": "Very Dense 90 plus %",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Seedlings (<0.5m)",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m:Sparse <10%",
+      "code_name": "Sparse <10%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m:Low 10 -<30%",
+      "code_name": "Low 10 -<30%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m:Moderate 30 -<60%",
+      "code_name": "Moderate 30 -<60%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m:Dense 60 -<90%",
+      "code_name": "Dense 60 -<90%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m:Very Dense 90 plus %",
+      "code_name": "Very Dense 90 plus %",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Seedling/Sapling:Sapling Saplings (0.5m - 1.5m",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback:Present <5% ",
+      "code_name": "Present <5% ",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback:Noticable ~25%",
+      "code_name": "Noticable ~25%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback:Obvious 50%",
+      "code_name": "Obvious 50%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback:Very Obvious 75%",
+      "code_name": "Very Obvious 75%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback:Extreme >90%",
+      "code_name": "Extreme >90%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dieback",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover:Very Low <10%",
+      "code_name": "Very Low <10%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover:Low 10 -<30%",
+      "code_name": "Low 10 -<30%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover:Moderate 30 -<60%",
+      "code_name": "Moderate 30 -<60%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover:Dense 60 -<90%",
+      "code_name": "Dense 60 -<90%",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover:Full 90% plus",
+      "code_name": "Full 90% plus",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Canopy Cover",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dead Trees:Present",
+      "code_name": "Present",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dead Trees",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dead Trees:Absent",
+      "code_name": "Absent",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Dead Trees",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Fallen Trees:Present",
+      "code_name": "Present",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Fallen Trees",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Condition:Fallen Trees:Absent",
+      "code_name": "Absent",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Condition:Fallen Trees",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Reclamation Loss",
+      "code_name": "Reclamation Loss",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Constructed Wetland",
+      "code_name": "Constructed Wetland",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Direct Damage",
+      "code_name": "Direct Damage",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Restricted Tidal Exchange",
+      "code_name": "Restricted Tidal Exchange",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Introduced Invasive",
+      "code_name": "Introduced Invasive",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Spill Damage",
+      "code_name": "Spill Damage",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Species-specific Effect",
+      "code_name": "Species-specific Effect",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Depositional Gain",
+      "code_name": "Depositional Gain",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Root Burial",
+      "code_name": "Root Burial",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Algal Excess",
+      "code_name": "Algal Excess",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Centre Sinking",
+      "code_name": "Centre Sinking",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Upstream Shift",
+      "code_name": "Upstream Shift",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Wrack Accumulation",
+      "code_name": "Wrack Accumulation",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Herbivore/Insect Attack",
+      "code_name": "Herbivore/Insect Attack",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Storm Damage",
+      "code_name": "Storm Damage",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Light Gaps",
+      "code_name": "Light Gaps",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Waterfront Erosion",
+      "code_name": "Waterfront Erosion",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Zonal Shift",
+      "code_name": "Zonal Shift",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Ecotone Shift",
+      "code_name": "Ecotone Shift",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators:Latitudinal Shift",
+      "code_name": "Latitudinal Shift",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Driver Indicators",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Forrest Gaps:Human Caused",
+      "code_name": "Human Caused",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Forrest Gaps",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Forrest Gaps:Natural Likely",
+      "code_name": "Natural Likely",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Forrest Gaps",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position:Front",
+      "code_name": "Front",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position:Front-Mid",
+      "code_name": "Front-Mid",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position:Mid",
+      "code_name": "Mid",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position:Mid-Top",
+      "code_name": "Mid-Top",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position:Top",
+      "code_name": "Top",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position:All",
+      "code_name": "All",
+      "category_name": "Mangrove Assessment Criteria:Forrest Structure:Forrest Continuity:Slope Position",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Bank Processes:Accreting",
+      "code_name": "Accreting",
+      "category_name": "Shoreline BioPhysical Features:Bank Processes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Bank Processes:Stable",
+      "code_name": "Stable",
+      "category_name": "Shoreline BioPhysical Features:Bank Processes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Bank Processes:Exposed",
+      "code_name": "Exposed",
+      "category_name": "Shoreline BioPhysical Features:Bank Processes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Bank Processes:Eroding",
+      "code_name": "Eroding",
+      "category_name": "Shoreline BioPhysical Features:Bank Processes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Bank Processes:Undercut",
+      "code_name": "Undercut",
+      "category_name": "Shoreline BioPhysical Features:Bank Processes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Bank Processes:Slumped",
+      "code_name": "Slumped",
+      "category_name": "Shoreline BioPhysical Features:Bank Processes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Mangrove Mud",
+      "code_name": "Mangrove Mud",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Fine Mud",
+      "code_name": "Fine Mud",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Fine Sand",
+      "code_name": "Fine Sand",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Sand",
+      "code_name": "Sand",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Clay",
+      "code_name": "Clay",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Peat",
+      "code_name": "Peat",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Gravel",
+      "code_name": "Gravel",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Sandstone/Mudstone",
+      "code_name": "Sandstone/Mudstone",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Coral Platform",
+      "code_name": "Coral Platform",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Rock Rubble",
+      "code_name": "Rock Rubble",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Solid Rock",
+      "code_name": "Solid Rock",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Intertidal Substrate:Built Wall",
+      "code_name": "Built Wall",
+      "category_name": "Shoreline BioPhysical Features:Intertidal Substrate",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:Tidal Channel",
+      "code_name": "Tidal Channel",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:Tidal Inlet",
+      "code_name": "Tidal Inlet",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:Tidal Creek",
+      "code_name": "Tidal Creek",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:Canal",
+      "code_name": "Canal",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:River Estuary",
+      "code_name": "River Estuary",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:Passage/Channel",
+      "code_name": "Passage/Channel",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting:Embayment",
+      "code_name": "Embayment",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Setting",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope:Flat <5 deg",
+      "code_name": "Flat <5 deg",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope:Gentle 5 -<20 deg",
+      "code_name": "Gentle 5 -<20 deg",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope:Moderate 20 -<45 deg",
+      "code_name": "Moderate 20 -<45 deg",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope:Steep 45 -<70 deg",
+      "code_name": "Steep 45 -<70 deg",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope:Sheer 70+ deg",
+      "code_name": "Sheer 70+ deg",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Slope",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Flat <5 deg",
+      "code_name": "Flat <5 deg",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Smooth",
+      "code_name": "Smooth",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Tiered",
+      "code_name": "Tiered",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:2-Tiered",
+      "code_name": "2-Tiered",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Rounded",
+      "code_name": "Rounded",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Obtuse",
+      "code_name": "Obtuse",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Right Angle",
+      "code_name": "Right Angle",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Square",
+      "code_name": "Square",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Square - Ledge",
+      "code_name": "Square - Ledge",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Berm",
+      "code_name": "Berm",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Cliff",
+      "code_name": "Cliff",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape:Cliff - Ledge",
+      "code_name": "Cliff - Ledge",
+      "category_name": "Shoreline BioPhysical Features:Setting/Bank Slope:Shape",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Modification Types:Rock Wall",
+      "code_name": "Rock Wall",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Modification Types",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Modification Types:Cement Wall",
+      "code_name": "Cement Wall",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Modification Types",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Modification Types:Wooden Wall",
+      "code_name": "Wooden Wall",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Modification Types",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Modification Types:Metal Sheeting",
+      "code_name": "Metal Sheeting",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Modification Types",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Modification Types:Composite",
+      "code_name": "Composite",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Modification Types",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Litter",
+      "code_name": "Litter",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Warf",
+      "code_name": "Warf",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Jetty",
+      "code_name": "Jetty",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Pontoon",
+      "code_name": "Pontoon",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Baffle/Gabbion",
+      "code_name": "Baffle/Gabbion",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Groyne",
+      "code_name": "Groyne",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Marina",
+      "code_name": "Marina",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Drain",
+      "code_name": "Drain",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Bridge",
+      "code_name": "Bridge",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Pylon",
+      "code_name": "Pylon",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Sign",
+      "code_name": "Sign",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Pipe",
+      "code_name": "Pipe",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Human Modifications:Extra Notes:Rubbish",
+      "code_name": "Rubbish",
+      "category_name": "Shoreline BioPhysical Features:Human Modifications:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:Agriculture, grazing",
+      "code_name": "Agriculture, grazing",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:Agriculture, crops",
+      "code_name": "Agriculture, crops",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:Industrial",
+      "code_name": "Industrial",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:Port Development",
+      "code_name": "Port Development",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:Mining",
+      "code_name": "Mining",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:Urban",
+      "code_name": "Urban",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Land Use, General:City",
+      "code_name": "City",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Land Use, General",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Wier Upstream",
+      "code_name": "Wier Upstream",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Dam Upstream",
+      "code_name": "Dam Upstream",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Shipping Port",
+      "code_name": "Shipping Port",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Larger Vessell Traffic",
+      "code_name": "Larger Vessell Traffic",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Marina Development",
+      "code_name": "Marina Development",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Small Vessell Traffic",
+      "code_name": "Small Vessell Traffic",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Ponded Pastures",
+      "code_name": "Ponded Pastures",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Tilled Agriculture",
+      "code_name": "Tilled Agriculture",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Shoreline BioPhysical Features:Land Use Types:Extra Notes:Heavy Cropping",
+      "code_name": "Heavy Cropping",
+      "category_name": "Shoreline BioPhysical Features:Land Use Types:Extra Notes",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation:Tidal Saltmarsh",
+      "code_name": "Tidal Saltmarsh",
+      "category_name": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation:Saline Grassland",
+      "code_name": "Saline Grassland",
+      "category_name": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation:Sedge Swamp",
+      "code_name": "Sedge Swamp",
+      "category_name": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation:Depression, shallow",
+      "code_name": "Depression, shallow",
+      "category_name": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation",
+      "point_colour": ""
+    }
+  },
+  {
+    "pk": null,
+    "model": "projects.AnnotationCodes",
+    "fields": {
+      "annotation_scheme": [
+        "Mangrove Watch Classification",
+        "1.0"
+      ],
+      "cpc_code": "",
+      "description": "",
+      "parent": null,
+      "caab_code": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation:Saltpan",
+      "code_name": "Saltpan",
+      "category_name": "Non-Mangrove Assessment Criteria:Non-Mangrove Vegetation",
+      "point_colour": ""
+    }
+  }
+]

@@ -1,0 +1,45 @@
+body {
+
+}
+
+div.hero-unit {
+    padding: 20px;
+}
+
+.navbar .brand {
+    max-height: 40px;
+    overflow: visible;
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0px;
+}
+
+.viewpane {
+/*    padding-left: 10px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-color: #ddd;*/
+}
+
+
+.header-padding{
+    padding-top: 60px;
+}
+
+
+/**
+    A box with a coloured sidebar
+*/
+.callout {
+    background-color: #F4F8FA;
+    border-color: #BCE8F1;
+    border-left: 3px solid #BCE8F1;
+    padding: 20px;
+}

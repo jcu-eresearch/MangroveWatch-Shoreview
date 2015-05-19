@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Tree</title>
+    <meta charset="utf-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        table,th,td
+        {
+            border:1px solid white;
+            text-align: left;
+            padding: 5px;
+
+        }
+
+        td {
+            background-color: lightcoral;
+            color:white;
+        }
+
+        td:hover {
+            background-color:#800080;
+            color:green;
+        }
+
+        td a {
+            display:block;
+            width:100%;
+            height: 100%;
+        }
+
+        a {
+            color:white;
+            text-decoration:none;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+<table id="MyTable">
+
+    <tbody>
+
+    </tbody>
+
+</table>
+
+<script src="json.js"></script>
+<script>
+
+    var tableRef = document.getElementById('MyTable').getElementsByTagName('tbody')[0];
+    var newRow;
+
+    for(var i=0; i<codeList.length; i++) {
+
+        if(i == 0 || i%4 == 0) {
+            // Insert a row in the table at the last row
+            newRow = tableRef.insertRow(tableRef.rows.length);
+        }
+
+        // Insert a cell in the row at index 0
+        var newCell  = newRow.insertCell(0);
+
+        var a = document.createElement('a');
+        a.title = codeList[i].fields.code_name;
+        a.href = "";
+
+        var newText  = document.createTextNode(codeList[i].fields.cpc_code)
+        a.appendChild(newText);
+
+        // Append a text node to the cell
+        newCell.appendChild(a);
+
+        //console.log(codeList[i].fields.cpc_code);
+    }
+
+</script>
+</body>
+</html>

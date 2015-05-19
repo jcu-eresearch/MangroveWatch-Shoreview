@@ -1,0 +1,13 @@
+#!/bin/bash -x
+
+SCRIPT_PATH="$(dirname "$(which "$0")")"
+
+service tomcat7 stop
+
+#==================================================#
+# REMOVE TOMCAT AND GEOSERVER and BENTHOBOX
+#==================================================#
+
+source $SCRIPT_PATH/destroy_benthobox
+source $SCRIPT_PATH/destroy_dolly
+source $SCRIPT_PATH/destroy_geoserver

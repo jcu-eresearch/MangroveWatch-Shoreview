@@ -1,0 +1,66 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    LoadModule  proxy_module         /usr/lib/apache2/modules/mod_proxy.so
+    LoadModule  proxy_http_module    /usr/lib/apache2/modules/mod_proxy_http.so
+    LoadModule  headers_module       /usr/lib/apache2/modules/mod_headers.so
+    LoadModule  deflate_module       /usr/lib/apache2/modules/mod_deflate.so
+    #LoadFile    /usr/lib/libxml2.so
+    LoadFile /usr/lib/x86_64-linux-gnu/libxml2.so.2
+
+    Alias /static STATIC_DIRECTORY_PATH
+    <Directory STATIC_DIRECTORY_PATH>
+        Require all granted
+        Options  +Indexes
+        </Directory>
+
+        Alias /media MEDIA_PATH
+        <Directory MEDIA_PATH>
+        Require all granted
+        Options  +Indexes
+        </Directory>
+
+    <IfModule mod_proxy.c>
+
+       ProxyRequests Off
+       <Proxy *>
+               Order deny,allow
+               Allow from all
+               Require all granted
+       </Proxy>
+
+       ProxyPass               /geoserver http://localhost:8080/geoserver
+       ProxyPassReverse        /geoserver http://localhost:8080/geoserver
+
+    <Location /geoserver>
+      ProxyPass http://localhost:8080/geoserver
+    </Location>
+
+       ProxyPreserveHost On
+    </IfModule>
+
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <Directory "/usr/lib/cgi-bin">
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    WSGIScriptAlias / WSGI_FILE_PATH
+
+    <Directory WSGI_FILE_PARENT_DIRECTORY>
+        <Files wsgi.py>
+        Order allow,deny
+        Allow from all
+        Require all granted
+        </Files>
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>

@@ -1,0 +1,108 @@
+{% extends "base-topmenu.html" %}
+{% block title %} Project Configure {% endblock %}
+
+{% block content %}
+
+
+    <div id="ProjectConfigureContainer" class=""></div>
+
+    <script type="text/template" id="ProjectConfigureTemplate">
+
+        <ul class="breadcrumb">
+            <li> <a href="/projects/">Projects</a> <spanclass="divider">></span> </li>
+            <li> <a href="/projects/<%= id %>"><%= name %></a> <spanclass="divider">></span> </li>
+            <li class="active">Configure</li>
+        </ul>
+
+        <form class="form-horizontal" id="form">
+            <fieldset>
+                <div class="configure_project_form">
+                    <legend>Project Details</legend>
+
+                    <div class="alert alert-error" style="display: none">
+                        <strong>
+                            <span id="error_message1"></span>
+                        </strong>
+                        <span id="error_message2"></span>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="short_name">
+                            Name:</label>
+
+                        <div class="controls">
+                            <input type="text" class="input-xlarge"
+                                   id="name" name="name"
+                                   data-error-style="inline"
+                                   value="<%= name %>">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="description">
+                            Description:</label>
+
+                        <div class="controls">
+                            <textarea class="input-xlarge" id="description"
+                                      name="description" rows="3"
+                                      data-error-style="inline"><%= description
+                                %></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="intelligent-points">
+                            Intelligent Point Selection:</label>
+
+                        <div class="controls make-switch switch-large">
+                            <input id="intelligent-points" type="checkbox" <%= intelligentpoints %>>
+                        </div>
+                    </div>
+
+                    <div style="margin-left: 374px;">
+                        <button type="button" class="btn btn-primary btn-large"
+                                id="save_button">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </script>
+
+    <script type="text/template" id="DeploymentTemplate">
+        <option value="<%=id%>"><%=short_name%></option>
+    </script>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/catamiUtils.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jpages/js/jPages.js"></script>
+    <!--<script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-model.js"></script>-->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-configure-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/js/spin.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap-switch/static/js/bootstrap-switch.js"></script>
+
+    <script type="text/javascript">
+
+        var projectId = "{{ project_id }}";
+
+        var project = new Project({id: projectId});
+        project.fetch({
+            success: function (model, response, options) {
+                var projectConfigureView = new ProjectConfigureView({
+                    el: $("#ProjectConfigureContainer")
+                });
+            },
+            error: function (model, response, options) {
+                $.notify({
+                    title: 'Failed to load project details. Try refreshing the page.',
+                    text: response.status,
+                    type: 'error', // success | info | error
+                    hide: true,
+                    icon: false,
+                    history: false,
+                    sticker: false
+                });
+            }
+        });
+
+    </script>
+
+{% endblock %}

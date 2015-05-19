@@ -1,0 +1,37 @@
+CRON_LOG_FILE="/etc/cron.hourly/catamiPortalLog.py"
+CRON_BAK_FILE="/etc/cron.hourly/catami-postgres-backup-cron.sh"
+#CATAMI_DIR="/home/benthobox_install"
+
+#==================================================#
+# DESTORY THE DATABASE, TEST DATABASE AND SUPERUSER
+#==================================================#
+
+#start postgres first
+/etc/init.d/postgresql restart
+
+echo "Destroying database, test database and superuser"
+su postgres -c "dropdb catamidb"
+su postgres -c "dropdb test_catamidb"
+#su postgres -c "dropuser pocock"
+
+#==================================================#
+# REMOVE THE LOG FILES
+#==================================================#
+echo "Removing log files"
+
+if [ -f $CRON_BAK_FILE ]; then
+    rm $CRON_BAK_FILE
+fi
+
+if [ -f $CRON_LOG_FILE ]; then
+    rm $CRON_LOG_FILE
+fi
+
+#==================================================#
+# REMOVE ANY OLD INSTALL DIRECTORIES
+#==================================================#
+#echo "removing "$CATAMI_DIR
+
+#if [ -d $CATAMI_DIR ]; then
+#    rm -r $CATAMI_DIR
+#fi

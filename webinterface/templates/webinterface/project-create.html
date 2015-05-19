@@ -1,0 +1,175 @@
+{% extends "base-topmenu.html" %}
+{% block title %}BenthoBox - Project List {% endblock %}
+{% block tail_head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}lib/jquery/plugins/chosen/chosen.css">{% endblock %}
+
+{% block content %}
+
+<div id="ProjectCreateContainer" class=""></div>
+
+<script type="text/template" id="ProjectCreateTemplate">
+
+    <ul class="breadcrumb">
+        <li><a href="/projects/">Projects</a>
+            <span class="divider">></span> </li>
+        <li class="active">Create</li>
+    </ul>
+
+    <form class="form-horizontal" id="form">
+
+        <fieldset>
+            <div class="create_project_form">
+                <legend>Project Details</legend>
+                <div class="alert alert-error" style="display: none">
+                    <strong><span id="error_message1"></span></strong><span id="error_message2"></span>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="short_name">
+                        Name:</label>
+
+                    <div class="controls">
+                        <input type="text" class="input-xlarge" id="name" name="name" data-error-style="inline"
+                               value="">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="description">
+                        Description:</label>
+
+                    <div class="controls">
+                        <textarea class="input-xlarge" id="description" name="description" rows="3"
+                                  data-error-style="inline"></textarea>
+                    </div>
+                </div>
+                <legend>Deployment to work on</legend>
+                <div class="control-group">
+                    <label class="control-label" for="deployment_id">
+                        Deployment:</label>
+
+                    <div class="controls">
+                        <select data-placeholder="Select deployment/s" style="width:350px;" class="chosen-select"
+                                multiple tabindex="6" id="deployment_id" name="deployment_id">
+                            <option value=""></option>
+                            <%=deployments%>
+                        </select>
+
+
+                    </div>
+                </div>
+                <legend>Annotation method</legend>
+
+                <div class="btn-group" data-toggle="buttons-radio">
+                    <button type="button" class="btn active" id="radio_point">
+                        Fine Scale
+                    </button>
+                    <button type="button" class="btn" id="radio_whole">
+                        Broad Scale
+                    </button>
+                </div>
+
+                <div class="point_annotation_div">
+                    <br>
+
+                    <div class="control-group">
+                        <label class="control-label" for="point_image_sampling_methodology">
+                            Image Sampling:</label>
+
+                        <div class="controls">
+                            <select class="input-xlarge" id="point_image_sampling_methodology"
+                                    name="point_image_sampling_methodology">
+                                <option value="0">Random</option>
+                                <option value="1">Stratified</option>
+                                <!--<option value="1">Spatial</option> Not implemented yet-->
+                                <option value="3">All</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="point_number_of_images" class="control-group">
+                        <label class="control-label" for="image_sample_size_point">
+                            Number of Images:</label>
+
+                        <div class="controls">
+                            <input type="number" class="input-xlarge" id="image_sample_size_point"
+                                   name="image_sample_size_point" value="1"
+                                   data-error-style="inline">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="point_sampling_methodology">
+                            Point Sampling:</label>
+
+                        <div class="controls">
+                            <select class="input-xlarge" id="point_sampling_methodology"
+                                    name="point_sampling_methodology">
+                                <option value="0">Random</option>
+                                <option value="2">Fixed 5 Point</option>
+                                <option value="3">Uniform Grid</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="point_sample_size_div" class="control-group">
+                        <label class="control-label" for="point_sample_size">
+                            Number of Points (per image):</label>
+
+                        <div class="controls">
+                            <input type="number" class="input-xlarge" id="point_sample_size" name="point_sample_size"
+                                   value="1"
+                                   data-error-style="inline">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wholeImage_annotation_annotation_div" style="display: none">
+                    <br>
+
+                    <div class="control-group">
+                        <label class="control-label" for="whole_image_sampling_methodology">
+                            Image Sampling:</label>
+
+                        <div class="controls">
+                            <select class="input-xlarge" id="whole_image_sampling_methodology"
+                                    name="whole_image_sampling_methodology">
+                                <option value="0">Random</option>
+                                <option value="1">Stratified</option>
+                                <!--<option value="1">Spatial</option> Not implemented yet-->
+                                <option value="3">All</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="whole_number_of_images" class="control-group">
+                        <label class="control-label" for="image_sample_size_whole">
+                            Number of Images:</label>
+
+                        <div class="controls">
+                            <input type="number" class="input-xlarge" id="image_sample_size_whole"
+                                   name="image_sample_size_whole" value="1"
+                                   data-error-style="inline">
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: 374px;">
+                    <button type="button" class="btn btn-primary btn-large" id="create_button">
+                        Create
+                    </button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</script>
+
+<script type="text/template" id="DeploymentTemplate">
+    <option value="<%=id%>"><%=short_name%></option>
+</script>
+
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/catamiUtils.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/chosen/chosen.jquery.js"
+        type="text/javascript"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/jpages/js/jPages.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/annotationset-model.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/js/spin.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-create-view.js"></script>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+#!/bin/bash -x
+#==================================================#
+# SETUP DOLLY
+#==================================================#
+#
+# Script needs to be run from the benthobox project path i.e ./install/install_dolly
+#
+
+INSTALL_PATH=$(pwd)
+PARENT_PATH="$(dirname "$INSTALL_PATH")"
+MEDIA_ROOT="$PARENT_PATH/benthobox-media"
+
+echo 'Setting up dolly'
+
+sudo chown tomcat7:tomcat7 /var/lib/tomcat7
+
+sudo apt-get -y install maven2
+sudo apt-get -y install default-jdk
+
+git clone https://github.com/threehundred/dolly.git
+
+cd dolly
+
+mvn clean:clean
+mvn compile war:war
+
+sed -i "s@<constructor-arg name="directoryToWatch"*@<constructor-arg name="directoryToWatch" value="$MEDIA_ROOT/importedimages"/>@g" target/dolly/WEB-INF/mvc-dispatcher-servlet.xml
+
+sudo cp -r target/dolly /var/lib/tomcat7/webapps/
+
+sudo service tomcat7 restart

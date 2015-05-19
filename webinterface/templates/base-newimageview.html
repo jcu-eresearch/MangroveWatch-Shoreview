@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Image view</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/css/jquery-ui-1.8.23.custom.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/css/fullscreenMap.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/css/overlay-basic.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/bootstrap/plugins/popover-extra-placements.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/font-awesome/css/font-awesome.css" type="text/css">
+<!--    <link rel="stylesheet" href="{{ STATIC_URL }}css/singleimage.css" type="text/css"> -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/css/imageannotate.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/jquery/jquery-ui.css" type="text/css">
+
+    <!-- Le elastislide styles -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="http://catami.ivec.org/static/lib/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="http://catami.ivec.org/static/lib/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="http://catami.ivec.org/static/lib/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="http://catami.ivec.org/static/lib/ico/apple-touch-icon-57-precomposed.png">
+          
+          
+    <style type="text/css">
+		#clear {
+		    text-indent: -1000em;
+		    width: 20px;
+		    height: 20px;
+		    display: inline-block;
+		    position: relative;
+		    left: -20px;
+		    top: 3px;
+		}
+		.thumbnail-list {
+			/* remove default list styles */
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background-color: black;
+ 			/* remove spaces between li tags*/
+			font-size: 0;
+		}
+		
+		.thumbnail-list li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0.1%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			min-height: 72px;
+			min-width: 72px;
+			max-height: 100px;
+			max-width: 100px;
+		}
+		
+		.thumbnail-list img {
+			display: block;
+			width: 100%;
+		}
+    </style>
+
+
+</head>
+
+<body>
+
+{% block content %}{% endblock %}
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/js/bootstrap-tooltip.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}lib/bootstrap/plugins/popover-extra-placements.js"></script>
+
+<!-- popover js -->
+<script type="text/javascript">
+/*
+    (function () {
+        $("[rel=popover-roll]").popover({ trigger: "hover" });
+    })();
+    (function () {
+        $("[rel=popover-click]").popover();
+    })();
+    (function () {
+        $("[rel=tooltip]").tooltip();
+    })();
+    $(function () {
+        $('#showthumnails').click(function () {
+            $('#thumbnailpane').toggle();
+        });
+    });
+*/
+
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                // Only send the token to relative URLs i.e. locally.
+                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+            }
+        }
+    });
+
+
+</script>
+{% block add_script %} {% endblock %}
+</body>
+</html>

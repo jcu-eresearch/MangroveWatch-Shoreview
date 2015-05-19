@@ -1,0 +1,6339 @@
+[
+  {
+    "fields": {
+      "owner": null,
+      "version": "1.3",
+      "name": "CATAMI Classification"
+    },
+    "model": "projects.AnnotationSchemes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIOTA",
+      "description": "No description",
+      "parent": null,
+      "code_name": "Biota",
+      "caab_code": "80000000",
+      "point_colour": "ffff00"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "NC",
+      "description": "No description",
+      "parent": null,
+      "code_name": "Not Considered",
+      "caab_code": "0",
+      "point_colour": "ffff00"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "NOI",
+      "description": "No description",
+      "parent": null,
+      "code_name": "Not of Interest",
+      "caab_code": "2",
+      "point_colour": "ffff00"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "P",
+      "description": "No description",
+      "parent": null,
+      "code_name": "Physical",
+      "caab_code": "82000000",
+      "point_colour": "ffff00"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "UNS",
+      "description": "No description",
+      "parent": null,
+      "code_name": "Unscorable",
+      "caab_code": "1",
+      "point_colour": "ffff00"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "A",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Ascidians",
+      "caab_code": "35000000",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Bacterial mats",
+      "caab_code": "72000901",
+      "point_colour": "fcca6c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BI",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Bioturbation",
+      "caab_code": "81000000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Brachiopods",
+      "caab_code": "19100000",
+      "point_colour": "696914"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRY",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Bryozoa",
+      "caab_code": "20000000",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CN",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Cnidaria",
+      "caab_code": "11500000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Crustacea",
+      "caab_code": "27000000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "E",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Echinoderms",
+      "caab_code": "25000000",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "F",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Fishes",
+      "caab_code": "37000000",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "J",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Jellies",
+      "caab_code": "80600903",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Macroalgae",
+      "caab_code": "80300000",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Molluscs",
+      "caab_code": "23000000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Sea spiders",
+      "caab_code": "33000000",
+      "point_colour": "808080"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SEAG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Seagrasses",
+      "caab_code": "63600901",
+      "point_colour": "1a4b63"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Sponges",
+      "caab_code": "10000000",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "W",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80000000"
+      ],
+      "code_name": "Worms",
+      "caab_code": "80600901",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "AS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "35000000"
+      ],
+      "code_name": "Ascidians: Stalked",
+      "caab_code": "35000904",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "AU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "35000000"
+      ],
+      "code_name": "Ascidians: Unstalked",
+      "caab_code": "35000901",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ASC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "35000904"
+      ],
+      "code_name": "Ascidians: Stalked: Colonial",
+      "caab_code": "35000906",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ASS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "35000904"
+      ],
+      "code_name": "Ascidians: Stalked: Solitary",
+      "caab_code": "35000905",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "AUC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "35000901"
+      ],
+      "code_name": "Ascidians: Unstalked: Colonial",
+      "caab_code": "35000903",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "AUS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "35000901"
+      ],
+      "code_name": "Ascidians: Unstalked: Solitary",
+      "caab_code": "35000902",
+      "point_colour": "999999"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BMC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "72000901"
+      ],
+      "code_name": "Bacterial mats: Cyanobacteria",
+      "caab_code": "70000901",
+      "point_colour": "fcca6c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BMO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "72000901"
+      ],
+      "code_name": "Bacterial mats: Other",
+      "caab_code": "72000902",
+      "point_colour": "fcca6c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Crawling traces",
+      "caab_code": "81005000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BID",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces",
+      "caab_code": "81001000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Feeding traces",
+      "caab_code": "81004000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Organism tests",
+      "caab_code": "81006000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Resting traces",
+      "caab_code": "81003000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Unknown origin",
+      "caab_code": "81007000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIW",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81000000"
+      ],
+      "code_name": "Bioturbation: Waste casts",
+      "caab_code": "81002000",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICCT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Complex trail",
+      "caab_code": "81005003",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICCR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Crater row",
+      "caab_code": "81005006",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICD",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Disturbed trace",
+      "caab_code": "81005007",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Mounded trail",
+      "caab_code": "81005004",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Perforated trail",
+      "caab_code": "81005005",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICTK",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Thick trail",
+      "caab_code": "81005002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BICTN",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81005000"
+      ],
+      "code_name": "Bioturbation: Crawling traces: Thin trail",
+      "caab_code": "81005001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Burrow cluster",
+      "caab_code": "81001004",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Crater cone",
+      "caab_code": "81001012",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Elongate depression",
+      "caab_code": "81001001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Fractured mound",
+      "caab_code": "81001013",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Large mound",
+      "caab_code": "81001002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Oblique burrow",
+      "caab_code": "81001005",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Paired burrow",
+      "caab_code": "81001007",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Rounded crater ring",
+      "caab_code": "81001010",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDSB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Single burrow",
+      "caab_code": "81001006",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDSM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Small mound",
+      "caab_code": "81001003",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDSC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Spiked crater ring",
+      "caab_code": "81001011",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDSP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Spotted mound",
+      "caab_code": "81001014",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Trapdoor burrow",
+      "caab_code": "81001009",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIDV",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81001000"
+      ],
+      "code_name": "Bioturbation: Dwelling traces: Vertical burrow",
+      "caab_code": "81001008",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIFL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81004000"
+      ],
+      "code_name": "Bioturbation: Feeding traces: Large rosette",
+      "caab_code": "81004001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIFPE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81004000"
+      ],
+      "code_name": "Bioturbation: Feeding traces: Petal rosette",
+      "caab_code": "81004003",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIFPI",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81004000"
+      ],
+      "code_name": "Bioturbation: Feeding traces: Pincushion rosette",
+      "caab_code": "81004005",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIFR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81004000"
+      ],
+      "code_name": "Bioturbation: Feeding traces: Rayed mound",
+      "caab_code": "81004004",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIFS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81004000"
+      ],
+      "code_name": "Bioturbation: Feeding traces: Small rosette",
+      "caab_code": "81004002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIOG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81006000"
+      ],
+      "code_name": "Bioturbation: Organism tests: Globule xenophyophore",
+      "caab_code": "81006002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIOL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81006000"
+      ],
+      "code_name": "Bioturbation: Organism tests: Lumpy xenophyophore",
+      "caab_code": "81006001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIRL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81003000"
+      ],
+      "code_name": "Bioturbation: Resting traces: Large depression",
+      "caab_code": "81003003",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIRS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81003000"
+      ],
+      "code_name": "Bioturbation: Resting traces: Star impression",
+      "caab_code": "81003002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIRU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81003000"
+      ],
+      "code_name": "Bioturbation: Resting traces: Urchin trace",
+      "caab_code": "81003001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Fern",
+      "caab_code": "81007006",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUMA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Matchstick",
+      "caab_code": "81007005",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUME",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Mesh",
+      "caab_code": "81007003",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Ovoid pinnate",
+      "caab_code": "81007001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Pogostick",
+      "caab_code": "81007007",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Round pinnate",
+      "caab_code": "81007002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIUS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81007000"
+      ],
+      "code_name": "Bioturbation: Unknown origin: Spider",
+      "caab_code": "81007004",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWCO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Coiled casts",
+      "caab_code": "81002001",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWCU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Curly casts",
+      "caab_code": "81002005",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Mounded casts",
+      "caab_code": "81002004",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWN",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Nest casts",
+      "caab_code": "81002006",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Round casts",
+      "caab_code": "81002003",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWSP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Spirals",
+      "caab_code": "81002007",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWSW",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Switchbacks",
+      "caab_code": "81002008",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BIWW",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "81002000"
+      ],
+      "code_name": "Bioturbation: Waste casts: Wavy casts",
+      "caab_code": "81002002",
+      "point_colour": "6acccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000000"
+      ],
+      "code_name": "Bryozoa: Hard",
+      "caab_code": "20000901",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000000"
+      ],
+      "code_name": "Bryozoa: Soft",
+      "caab_code": "20000905",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYHB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000901"
+      ],
+      "code_name": "Bryozoa: Hard: Branching",
+      "caab_code": "20000908",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYHE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000901"
+      ],
+      "code_name": "Bryozoa: Hard: Encrusting",
+      "caab_code": "20000902",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYHF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000901"
+      ],
+      "code_name": "Bryozoa: Hard: Fenestrate",
+      "caab_code": "20000903",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYHM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000901"
+      ],
+      "code_name": "Bryozoa: Hard: Massive",
+      "caab_code": "20000904",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYSD",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000905"
+      ],
+      "code_name": "Bryozoa: Soft: Dendroid",
+      "caab_code": "20000906",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BRYSF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "20000905"
+      ],
+      "code_name": "Bryozoa: Soft: Foliaceous",
+      "caab_code": "20000907",
+      "point_colour": "0b1cf9"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNCA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500000"
+      ],
+      "code_name": "Cnidaria: Colonial anemones",
+      "caab_code": "11500901",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "C",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500000"
+      ],
+      "code_name": "Cnidaria: Corals",
+      "caab_code": "11168000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNHYC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500000"
+      ],
+      "code_name": "Cnidaria: Hydrocorals",
+      "caab_code": "11077000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNHYD",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500000"
+      ],
+      "code_name": "Cnidaria: Hydroids",
+      "caab_code": "11001000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNTR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500000"
+      ],
+      "code_name": "Cnidaria: True anemones",
+      "caab_code": "11229000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNTU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500000"
+      ],
+      "code_name": "Cnidaria: Tube anemones",
+      "caab_code": "11164000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNCAC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500901"
+      ],
+      "code_name": "Cnidaria: Colonial anemones: Corallimorphs",
+      "caab_code": "11280000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNCAZ",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11500901"
+      ],
+      "code_name": "Cnidaria: Colonial anemones: Zoanthids",
+      "caab_code": "11284000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168000"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals",
+      "caab_code": "11168901",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals",
+      "caab_code": "11290000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBBH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Blue coral (Heliopora)",
+      "caab_code": "11171000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D)",
+      "caab_code": "11168902",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Encrusting",
+      "caab_code": "11168919",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Fan (2D)",
+      "caab_code": "11168912",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Massive soft corals",
+      "caab_code": "11168920",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBOT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Organ pipe coral (Tubipora)",
+      "caab_code": "11201901",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBQ",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Quill (seapen)",
+      "caab_code": "11168918",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBW",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168901"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Whip",
+      "caab_code": "11168917",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBBF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168902"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Fleshy",
+      "caab_code": "11168909",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBBN",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168902"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Non-fleshy",
+      "caab_code": "11168903",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBBFA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168909"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Fleshy: Arborescent",
+      "caab_code": "11168911",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBBFM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168909"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Fleshy: Mushroom",
+      "caab_code": "11168910",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBBNA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168903"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Non-fleshy: Arborescent",
+      "caab_code": "11168904",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBNB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168903"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Non-fleshy: Bottle-brush",
+      "caab_code": "11168905",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBNBU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168903"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Non-fleshy: Bushy",
+      "caab_code": "11168908",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBNBC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168905"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Non-fleshy: Bottle-brush: Complex",
+      "caab_code": "11168907",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBNBS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168905"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Branching (3D): Non-fleshy: Bottle-brush: Simple",
+      "caab_code": "11168906",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBFF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168912"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Fan (2D): Fern-frond",
+      "caab_code": "11168913",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBFR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168912"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Fan (2D): Rigid",
+      "caab_code": "11168916",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBFFC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168913"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Fan (2D): Fern-frond: Complex",
+      "caab_code": "11168915",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CBFFS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11168913"
+      ],
+      "code_name": "Cnidaria: Corals: Black & Octocorals: Fan (2D): Fern-frond: Simple",
+      "caab_code": "11168914",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSBO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Bottlebrush",
+      "caab_code": "11290904",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSBR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Branching",
+      "caab_code": "11290912",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSCOL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Columnar",
+      "caab_code": "11290915",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSCOR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Corymbose",
+      "caab_code": "11290910",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSD",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Digitate",
+      "caab_code": "11290909",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Encrusting",
+      "caab_code": "11290908",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Foliose / plate",
+      "caab_code": "11290907",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Massive",
+      "caab_code": "11290906",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSSO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Solitary",
+      "caab_code": "11290901",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSST",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Staghorn",
+      "caab_code": "11290913",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSSU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Sub-massive",
+      "caab_code": "11290905",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CST",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290000"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Tabulate",
+      "caab_code": "11290911",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSSOA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290901"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Solitary: Attached",
+      "caab_code": "11290903",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSSOF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290901"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Solitary: Free-living",
+      "caab_code": "11290902",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CSSOM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11290901"
+      ],
+      "code_name": "Cnidaria: Corals: Stony corals: Solitary: Mushroom (Fungiidae)",
+      "caab_code": "11298000",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNHYCB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11077000"
+      ],
+      "code_name": "Cnidaria: Hydrocorals: Branching",
+      "caab_code": "11077906",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNHYCS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11077000"
+      ],
+      "code_name": "Cnidaria: Hydrocorals: Submassive / encrusting",
+      "caab_code": "11077907",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNTFT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11229000"
+      ],
+      "code_name": "Cnidaria: True anemones: Flytrap",
+      "caab_code": "11229901",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNTFL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11229000"
+      ],
+      "code_name": "Cnidaria: True anemones: Fourlobed",
+      "caab_code": "11229902",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CNTRO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "11229000"
+      ],
+      "code_name": "Cnidaria: True anemones: Other anemones",
+      "caab_code": "11229903",
+      "point_colour": "fa7d1e"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27000000"
+      ],
+      "code_name": "Crustacea: Barnacles",
+      "caab_code": "27500000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27000000"
+      ],
+      "code_name": "Crustacea: Crabs",
+      "caab_code": "28000903",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27000000"
+      ],
+      "code_name": "Crustacea: Hermit crabs",
+      "caab_code": "28825901",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27000000"
+      ],
+      "code_name": "Crustacea: Lobsters",
+      "caab_code": "28000902",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27000000"
+      ],
+      "code_name": "Crustacea: Prawns / shrimps / mysids",
+      "caab_code": "28000901",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRBA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27500000"
+      ],
+      "code_name": "Crustacea: Barnacles: Acorn",
+      "caab_code": "27500902",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRBS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "27500000"
+      ],
+      "code_name": "Crustacea: Barnacles: Stalked",
+      "caab_code": "27500901",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRCK",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000903"
+      ],
+      "code_name": "Crustacea: Crabs: King crabs",
+      "caab_code": "28836000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRCP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000903"
+      ],
+      "code_name": "Crustacea: Crabs: Porcelain crabs",
+      "caab_code": "28843000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRCT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000903"
+      ],
+      "code_name": "Crustacea: Crabs: True crabs",
+      "caab_code": "28850000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRHWZ",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28825901"
+      ],
+      "code_name": "Crustacea: Hermit crabs: With anemones",
+      "caab_code": "28825903",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRHGS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28825901"
+      ],
+      "code_name": "Crustacea: Hermit crabs: With shell or stone home ",
+      "caab_code": "28825902",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRLR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000902"
+      ],
+      "code_name": "Crustacea: Lobsters: Rock lobsters",
+      "caab_code": "28820000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRLSL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000902"
+      ],
+      "code_name": "Crustacea: Lobsters: Slipper lobsters / bugs",
+      "caab_code": "28821000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRLSQ",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000902"
+      ],
+      "code_name": "Crustacea: Lobsters: Squat lobsters",
+      "caab_code": "28825904",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "CRLT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "28000902"
+      ],
+      "code_name": "Crustacea: Lobsters: True lobsters",
+      "caab_code": "28786000",
+      "point_colour": "3acccb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "EF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25000000"
+      ],
+      "code_name": "Echinoderms: Feather stars",
+      "caab_code": "25001000",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "EO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25000000"
+      ],
+      "code_name": "Echinoderms: Ophiuroids",
+      "caab_code": "25160000",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25000000"
+      ],
+      "code_name": "Echinoderms: Sea cucumbers",
+      "caab_code": "25400000",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25000000"
+      ],
+      "code_name": "Echinoderms: Sea stars",
+      "caab_code": "25102000",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25000000"
+      ],
+      "code_name": "Echinoderms: Sea urchins",
+      "caab_code": "25200000",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "EFS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25001000"
+      ],
+      "code_name": "Echinoderms: Feather stars: Stalked crinoids",
+      "caab_code": "25001901",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "EFU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25001000"
+      ],
+      "code_name": "Echinoderms: Feather stars: Unstalked crinoids",
+      "caab_code": "25001902",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "EOBS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25160000"
+      ],
+      "code_name": "Echinoderms: Ophiuroids: Basket stars",
+      "caab_code": "25160902",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "EOBSS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25160000"
+      ],
+      "code_name": "Echinoderms: Ophiuroids: Brittle / snake stars",
+      "caab_code": "25160901",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESCB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25400000"
+      ],
+      "code_name": "Echinoderms: Sea cucumbers: Benthic",
+      "caab_code": "25400901",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESCP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25400000"
+      ],
+      "code_name": "Echinoderms: Sea cucumbers: Pelagic / swimming",
+      "caab_code": "25400902",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESUI",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25200000"
+      ],
+      "code_name": "Echinoderms: Sea urchins: Irregular urchins",
+      "caab_code": "25200902",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "ESUR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "25200000"
+      ],
+      "code_name": "Echinoderms: Sea urchins: Regular urchins",
+      "caab_code": "25200901",
+      "point_colour": "c83314"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "FB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "37000000"
+      ],
+      "code_name": "Fishes: Bony fishes",
+      "caab_code": "37990083",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "FEE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "37000000"
+      ],
+      "code_name": "Fishes: Eels",
+      "caab_code": "37990025",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "FEL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "37000000"
+      ],
+      "code_name": "Fishes: Elasmobranchs",
+      "caab_code": "37990082",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "FELC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "37990082"
+      ],
+      "code_name": "Fishes: Elasmobranchs: Chimaeras",
+      "caab_code": "37990028",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "FELR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "37990082"
+      ],
+      "code_name": "Fishes: Elasmobranchs: Rays & skates",
+      "caab_code": "37990030",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "FELS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "37990082"
+      ],
+      "code_name": "Fishes: Elasmobranchs: Sharks",
+      "caab_code": "37990016",
+      "point_colour": "fcca9c"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JCT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Ctenophores",
+      "caab_code": "12000000",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JCU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Cubozoa",
+      "caab_code": "11150000",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Hydromedusae",
+      "caab_code": "11000901",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Pyrosomes",
+      "caab_code": "35101000",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JSA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Salps",
+      "caab_code": "35100000",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JSC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Scyphozoa",
+      "caab_code": "11120000",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "JSI",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600903"
+      ],
+      "code_name": "Jellies: Siphonophores",
+      "caab_code": "11090000",
+      "point_colour": "2987c1"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Articulated calcareous",
+      "caab_code": "80300911",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAEN",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Encrusting",
+      "caab_code": "80300926",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAEC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Erect coarse branching",
+      "caab_code": "80300903",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAEF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Erect fine branching",
+      "caab_code": "80300907",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Filamentous / filiform",
+      "caab_code": "80300930",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Globose / saccate",
+      "caab_code": "80300914",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MALA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Laminate",
+      "caab_code": "80300918",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MALC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Large canopy-forming",
+      "caab_code": "80300901",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300000"
+      ],
+      "code_name": "Macroalgae: Sheet-like / membraneous",
+      "caab_code": "80300922",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAAG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300911"
+      ],
+      "code_name": "Macroalgae: Articulated calcareous: Green",
+      "caab_code": "80300912",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAAR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300911"
+      ],
+      "code_name": "Macroalgae: Articulated calcareous: Red",
+      "caab_code": "80300913",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAENB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300926"
+      ],
+      "code_name": "Macroalgae: Encrusting: Brown",
+      "caab_code": "80300927",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAENG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300926"
+      ],
+      "code_name": "Macroalgae: Encrusting: Green",
+      "caab_code": "80300928",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAENR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300926"
+      ],
+      "code_name": "Macroalgae: Encrusting: Red",
+      "caab_code": "80300929",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAENRC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300929"
+      ],
+      "code_name": "Macroalgae: Encrusting: Red: Calcareous",
+      "caab_code": "80300934",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MEANRNC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300929"
+      ],
+      "code_name": "Macroalgae: Encrusting: Red: Non-calcareous",
+      "caab_code": "80300935",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAECB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300903"
+      ],
+      "code_name": "Macroalgae: Erect coarse branching: Brown",
+      "caab_code": "80300904",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAECG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300903"
+      ],
+      "code_name": "Macroalgae: Erect coarse branching: Green",
+      "caab_code": "80300905",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAECR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300903"
+      ],
+      "code_name": "Macroalgae: Erect coarse branching: Red",
+      "caab_code": "80300906",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAEFB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300907"
+      ],
+      "code_name": "Macroalgae: Erect fine branching: Brown",
+      "caab_code": "80300908",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAEFG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300907"
+      ],
+      "code_name": "Macroalgae: Erect fine branching: Green",
+      "caab_code": "80300909",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAEFR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300907"
+      ],
+      "code_name": "Macroalgae: Erect fine branching: Red",
+      "caab_code": "80300910",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAFB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300930"
+      ],
+      "code_name": "Macroalgae: Filamentous / filiform: Brown",
+      "caab_code": "80300931",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAFG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300930"
+      ],
+      "code_name": "Macroalgae: Filamentous / filiform: Green",
+      "caab_code": "80300932",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAFR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300930"
+      ],
+      "code_name": "Macroalgae: Filamentous / filiform: Red",
+      "caab_code": "80300933",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAGB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300914"
+      ],
+      "code_name": "Macroalgae: Globose / saccate: Brown",
+      "caab_code": "80300915",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAGG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300914"
+      ],
+      "code_name": "Macroalgae: Globose / saccate: Green",
+      "caab_code": "80300916",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MAGR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300914"
+      ],
+      "code_name": "Macroalgae: Globose / saccate: Red",
+      "caab_code": "80300917",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MALAB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300918"
+      ],
+      "code_name": "Macroalgae: Laminate: Brown",
+      "caab_code": "80300919",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MALAG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300918"
+      ],
+      "code_name": "Macroalgae: Laminate: Green",
+      "caab_code": "80300920",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MALAR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300918"
+      ],
+      "code_name": "Macroalgae: Laminate: Red",
+      "caab_code": "80300921",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MALCB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300901"
+      ],
+      "code_name": "Macroalgae: Large canopy-forming: Brown",
+      "caab_code": "80300902",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MASB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300922"
+      ],
+      "code_name": "Macroalgae: Sheet-like / membraneous: Brown",
+      "caab_code": "80300923",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MASG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300922"
+      ],
+      "code_name": "Macroalgae: Sheet-like / membraneous: Green",
+      "caab_code": "80300924",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MASR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80300922"
+      ],
+      "code_name": "Macroalgae: Sheet-like / membraneous: Red",
+      "caab_code": "80300925",
+      "point_colour": "f70e17"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23000000"
+      ],
+      "code_name": "Molluscs: Bivalves",
+      "caab_code": "23199000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOCE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23000000"
+      ],
+      "code_name": "Molluscs: Cephalopods",
+      "caab_code": "23590000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOCH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23000000"
+      ],
+      "code_name": "Molluscs: Chitons",
+      "caab_code": "23100000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23000000"
+      ],
+      "code_name": "Molluscs: Gastropods",
+      "caab_code": "24000000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOCEC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23590000"
+      ],
+      "code_name": "Molluscs: Cephalopods: Cuttlefish",
+      "caab_code": "23607000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOCEO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23590000"
+      ],
+      "code_name": "Molluscs: Cephalopods: Octopods",
+      "caab_code": "23650000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "MOCES",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "23590000"
+      ],
+      "code_name": "Molluscs: Cephalopods: Squid",
+      "caab_code": "23615000",
+      "point_colour": "cccccc"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000000"
+      ],
+      "code_name": "Sponges: Crusts",
+      "caab_code": "10000901",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000000"
+      ],
+      "code_name": "Sponges: Erect forms",
+      "caab_code": "10000912",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000000"
+      ],
+      "code_name": "Sponges: Hollow forms",
+      "caab_code": "10000909",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000000"
+      ],
+      "code_name": "Sponges: Massive forms",
+      "caab_code": "10000903",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPCCR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000901"
+      ],
+      "code_name": "Sponges: Crusts: Creeping / ramose",
+      "caab_code": "10000917",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPCE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000901"
+      ],
+      "code_name": "Sponges: Crusts: Encrusting",
+      "caab_code": "10000902",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPEB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000912"
+      ],
+      "code_name": "Sponges: Erect forms: Branching",
+      "caab_code": "10000915",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPEL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000912"
+      ],
+      "code_name": "Sponges: Erect forms: Laminar",
+      "caab_code": "10000913",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPEP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000912"
+      ],
+      "code_name": "Sponges: Erect forms: Palmate",
+      "caab_code": "10000914",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPES",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000912"
+      ],
+      "code_name": "Sponges: Erect forms: Simple",
+      "caab_code": "10000916",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPMST",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000912"
+      ],
+      "code_name": "Sponges: Erect forms: Stalked",
+      "caab_code": "10000906",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPMB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000909"
+      ],
+      "code_name": "Sponges: Hollow forms: Barrels",
+      "caab_code": "10000907",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPHC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000909"
+      ],
+      "code_name": "Sponges: Hollow forms: Cups and alikes",
+      "caab_code": "10000910",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPHTA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000909"
+      ],
+      "code_name": "Sponges: Hollow forms: Tabular",
+      "caab_code": "10000920",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPHT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000909"
+      ],
+      "code_name": "Sponges: Hollow forms: Tubes and chimneys",
+      "caab_code": "10000911",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPHCG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000910"
+      ],
+      "code_name": "Sponges: Hollow forms: Cups and alikes: Cup / goblet",
+      "caab_code": "10000919",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPHCIC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000910"
+      ],
+      "code_name": "Sponges: Hollow forms: Cups and alikes: Incomplete cup / curled fan",
+      "caab_code": "10000918",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPMR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000903"
+      ],
+      "code_name": "Sponges: Massive forms: Balls",
+      "caab_code": "10000905",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPMC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000903"
+      ],
+      "code_name": "Sponges: Massive forms: Cryptic",
+      "caab_code": "10000908",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SPMSI",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "10000903"
+      ],
+      "code_name": "Sponges: Massive forms: Simple",
+      "caab_code": "10000904",
+      "point_colour": "cbc83d"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WA",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600901"
+      ],
+      "code_name": "Worms: Acorn worms",
+      "caab_code": "36110000",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WEE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600901"
+      ],
+      "code_name": "Worms: Echiura",
+      "caab_code": "17020000",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600901"
+      ],
+      "code_name": "Worms: Flatworms",
+      "caab_code": "13000000",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WPE",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600901"
+      ],
+      "code_name": "Worms: Penisworms",
+      "caab_code": "15400000",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WPO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600901"
+      ],
+      "code_name": "Worms: Polychaetes",
+      "caab_code": "22000000",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WES",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "80600901"
+      ],
+      "code_name": "Worms: Sipuncula",
+      "caab_code": "17000000",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WPOO",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "22000000"
+      ],
+      "code_name": "Worms: Polychaetes: Other polychaetes",
+      "caab_code": "22000902",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "WPOT",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "22000000"
+      ],
+      "code_name": "Worms: Polychaetes: Tube worms",
+      "caab_code": "22000901",
+      "point_colour": "2fc553"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82000000"
+      ],
+      "code_name": "Bedforms",
+      "caab_code": "82002000",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "R",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82000000"
+      ],
+      "code_name": "Relief",
+      "caab_code": "82003000",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "S",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82000000"
+      ],
+      "code_name": "Substrate",
+      "caab_code": "82001000",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B2",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002000"
+      ],
+      "code_name": "Bedforms: 2D",
+      "caab_code": "82002002",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B3",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002000"
+      ],
+      "code_name": "Bedforms: 3D",
+      "caab_code": "82002006",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002000"
+      ],
+      "code_name": "Bedforms: Bioturbated",
+      "caab_code": "82002005",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "BN",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002000"
+      ],
+      "code_name": "Bedforms: None",
+      "caab_code": "82002001",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B2R",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002002"
+      ],
+      "code_name": "Bedforms: 2D: Ripples (<10cm height)",
+      "caab_code": "82002003",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B2W",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002002"
+      ],
+      "code_name": "Bedforms: 2D: Waves (>10cm height)",
+      "caab_code": "82002004",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B3R",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002006"
+      ],
+      "code_name": "Bedforms: 3D: Ripples (<10cm height)",
+      "caab_code": "82002007",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "B3W",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82002006"
+      ],
+      "code_name": "Bedforms: 3D: Waves (>10cm height)",
+      "caab_code": "82002008",
+      "point_colour": "c3fcba"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003000"
+      ],
+      "code_name": "Relief: Flat",
+      "caab_code": "82003001",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003000"
+      ],
+      "code_name": "Relief: High",
+      "caab_code": "82003005",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003000"
+      ],
+      "code_name": "Relief: Low / moderate",
+      "caab_code": "82003002",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RHH",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003005"
+      ],
+      "code_name": "Relief: High: High (>3m)",
+      "caab_code": "82003006",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RHR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003005"
+      ],
+      "code_name": "Relief: High: Wall",
+      "caab_code": "82003007",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RLL",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003002"
+      ],
+      "code_name": "Relief: Low / moderate: Low (<1m)",
+      "caab_code": "82003003",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "RLM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82003002"
+      ],
+      "code_name": "Relief: Low / moderate: Moderate (1-3m)",
+      "caab_code": "82003004",
+      "point_colour": "cbfefb"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001000"
+      ],
+      "code_name": "Substrate: Consolidated (hard)",
+      "caab_code": "82001001",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SU",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001000"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft)",
+      "caab_code": "82001005",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SCB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001001"
+      ],
+      "code_name": "Substrate: Consolidated (hard): Boulders",
+      "caab_code": "82001003",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SCC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001001"
+      ],
+      "code_name": "Substrate: Consolidated (hard): Cobbles",
+      "caab_code": "82001004",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SCR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001001"
+      ],
+      "code_name": "Substrate: Consolidated (hard): Rock",
+      "caab_code": "82001002",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001005"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel",
+      "caab_code": "82001006",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001005"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Sand / mud (<2mm)",
+      "caab_code": "82001013",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001006"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Biologenic",
+      "caab_code": "82001007",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPG",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001006"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Gravel (2-10mm)",
+      "caab_code": "82001011",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPP",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001006"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Pebble (10-64mm)",
+      "caab_code": "82001012",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPBB",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001007"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Biologenic: Barnacle plates",
+      "caab_code": "82001010",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPBC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001007"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Biologenic: Coquina / shellhash",
+      "caab_code": "82001008",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPBR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001007"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Biologenic: Coral rubble",
+      "caab_code": "82001009",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPBR",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001007"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Biologenic: Rhodoliths",
+      "caab_code": "82001018",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUPBS",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001007"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Pebble / gravel: Biologenic: Screwshells",
+      "caab_code": "82001017",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUSC",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001013"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Sand / mud (<2mm): Coarse sand (with shell fragments)",
+      "caab_code": "82001014",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUSF",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001013"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Sand / mud (<2mm): Fine sand (no shell fragments)",
+      "caab_code": "82001015",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  },
+  {
+    "fields": {
+      "annotation_scheme": [
+        "CATAMI Classification",
+        "1.3"
+      ],
+      "cpc_code": "SUSM",
+      "description": "No description",
+      "parent": [
+        [
+          "CATAMI Classification",
+          "1.3"
+        ],
+        "82001013"
+      ],
+      "code_name": "Substrate: Unconsolidated (soft): Sand / mud (<2mm): Mud / silt (<64um)",
+      "caab_code": "82001016",
+      "point_colour": "daaeaa"
+    },
+    "model": "projects.AnnotationCodes",
+    "pk": null
+  }
+]

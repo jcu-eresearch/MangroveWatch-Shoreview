@@ -1,0 +1,16 @@
+<layer>
+  <name>catamidb_campaigns_centroid</name>
+  <id>LayerInfoImpl--ddbdabc:13fc6760253:17ff</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--ddbdabc:13fc6760253:61ca</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--ddbdabc:13fc6760253:17fe</id>
+  </resource>
+  <enabled>true</enabled>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

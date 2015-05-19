@@ -1,0 +1,422 @@
+{% extends "base-topmenu.html" %}
+{% block title %}BenthoBox - Project List {% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/project-annotate.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/css/elastislide/elastislide.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/css/elastislide/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/silviomoreto-bootstrap-select/bootstrap-select.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.viewcenter/leaflet.viewcenter.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/leaflet-0.7.2/Leaflet.awesome-markers-2.0.2/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/jquery/plugins/chosen/chosen.css">
+
+
+    <div id="load-error-div" class="alert alert-error" style="display: none">
+        <strong>
+            <span id="load-error-message"></span>
+        </strong>
+    </div>
+
+    <div id="ContentContainer" class='row-fluid columns nopadding'>
+
+        <div class="col-md-1 nopadding" style="height: 100%;">
+
+            <div class="panel panel-default nopadding" >
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thumbnails</h3>
+                </div>
+
+                <div class="panel-body row nopadding" style="text-align: center">
+                    <!--<button id="ThumbnailFilterButton" data-target="#ThumbnailFilterModal" data-toggle="modal" type="button" class="btn btn-link btn-sm" title="Filter thumbnails.">Filter</button>-->
+                    <select id="ThumbnailFilterSelect" class="input-sm" style="max-width: 100%">
+                    </select>
+                </div>
+
+                <div class="panel-body row nopadding" style="text-align: center">
+                    <button id="ThumbnailBackButton" type="button" class="btn btn-link btn-sm pull-left" title="Previous page of thumbnails."><i class="fa fa-chevron-left"></i></button>
+                    <select id="ThumbnailPageSelect" class="input-sm" >
+
+                    </select>
+                    <button id="ThumbnailForwardButton" type="button" class="btn btn-link btn-sm pull-right" title="Next page of thumbnails."><i class="fa fa-chevron-right"></i></button>
+                </div>
+
+            </div>
+
+            <div style="height: calc(100% - 268px) ; overflow: auto">
+
+                <div id="ThumbnailStripContainer"></div>
+                <!--<ul id="pagination"></ul>-->
+            </div>
+
+            <div class="panel panel-default nopadding">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Location</h3>
+                </div>
+                <div class="panel-body nopadding">
+                    <div id="map" style="width:100%;height:150px;z-index:0;padding:0;"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-8 nopadding" style="height: 100%">
+
+            <div id="ImageToolbarContainer" class="panel panel-default nopadding" style="height: 100%;">
+                <div class="panel-heading" style="text-align: center">
+                    <button id="PreviousImageButton" type="button" class="btn btn-link btn-xs pull-left nopadding" title="Go to the previous image in the sequence."> < Previous Image </button>
+
+                    <!--<button id="SimilarImageTabButton" data-toggle="modal" data-target="#SimilarImageModal" type="button" class="btn btn-link btn-xs nopadding" title="See a list of images which look like this one."> <i class="fa fa-file-image-o"></i> Similar Images </button>-->
+                    <!--<button type="button" class="btn btn-link btn-xs nopadding" title="See the spatial location of the current image."> <i class="fa fa-map-marker"></i> Location </button>-->
+                    <button data-toggle="modal" data-target="#StatsModal" type="button" class="btn btn-link btn-xs nopadding" title="See the charts and statics for this project."> <i class="fa fa-line-chart"></i> Charts </button>
+                    <label class="btn btn-link btn-xs nopadding" title="When this option is selected, labels from the current image are carried across to the next image when you click the 'Next Image' button.">
+                        <input id="WalkForwardLabelling" type="checkbox" autocomplete="off" checked> Walk Forward Labelling
+                    </label>
+
+                    <button id="NextImageButton" type="button" class="btn btn-link btn-xs pull-right nopadding" title="Go to the next image in the sequence."> Next Image > </button>
+                </div>
+                <div class="panel-body nopadding" style="height: 100%">
+                    <div id="ImageViewer"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="RightPane" class="col-md-3 nopadding" style="height: 100%; overflow: auto">
+
+            <div class="panel panel-default nopadding">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Select Annotation</h3>
+                </div>
+                <div class="panel-body nopadding" id="AnnotationSelectionTab">
+                    <select id="CategorySelector" data-placeholder="Choose a category to annotate..." multiple class="chosen-select col-md-12">
+                        <option value=""></option>
+                    </select>
+
+                    <table id="AnnotationPanel">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal fade" id="SimilarImageModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Similar Images</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="ImageSimilarityContainer"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="StatsModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Project Statistics</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="AnnotationStatusContainer"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="ThumbnailFilterModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Thumbnail Filter</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!-- import conttainer -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Modal -->
+        <div id="similar-points-modal" class="modal hide fade" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Intelligent Points not enabled.</h3>
+            </div>
+            <div class="modal-body">
+                To enable Intelligent Point selection you will need to turn it on in your projects configuration. Please
+                note that turning this on may slow down image loading. We also recommend you use google Chrome when
+                Intelligent Points is enabled.
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button id="configure_project_button" data-dismiss="modal" class="btn btn-primary">Configure Project
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/template" id="ImageSimilarityTemplate">
+        <h3></h3>
+
+        <div class="row-fluid">
+            <%=controls%>
+
+        </div>
+
+        <div style="padding-top: 10px" class="row-fluid">
+            <%=images%>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="SimilaritySelectAllTemplate">
+        <button id="SimilarSameAll" class="btn btn btn-success" type="button"><i class="icon-ok"></i> Yes, apply same
+            labels to all similar images.
+        </button>
+    </script>
+
+    <script type="text/template" id="SimilarityThumbnailTemplate">
+        <!--<a href="#<%= index %>-modal" data-toggle="modal"> <img id="<%= index %>" class="similarThumbnail" src="<%= thumbnail_location %>" style="padding-bottom: 5px;"> </a>-->
+
+        <div id="<%= index %>" class="SimilarThumbnailContainer">
+            <img id="<%= index %>" class="similarThumbnail" src="<%= thumbnail_location %>"
+                 style="padding-bottom: 5px;">
+            <button id="SimilarSameButton<%= index %>" class="btn btn-small btn-success SimilarSameButton" type="button"
+                    title="Yes, this image is the same."><i class="fa fa-check"></i></button>
+            <!--<button id="SimilarNotSameButton" class="btn btn-mini btn-danger" type="button"><i class="icon-remove"></i></button>-->
+            <a href="#<%= index %>-modal" data-toggle="modal" id="SimilarModalButton<%= index %>"
+               class="btn btn-small SimilarModalButton" type="button" title="Take a closer look."><i
+                    class="fa fa-search"></i></a>
+
+            <span id="SimilarSameLayer<%= index %>" class="SimilarSameLayer"><i class="fa fa-check fa-3x"></i></span>
+        </div>
+
+        <!-- Modal -->
+        <div id="<%= index %>-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Copy the same broad scale classification to this image?</h3>
+            </div>
+            <div class="modal-body">
+                <img src="<%= web_location %>">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button id="<%= index %>" data-dismiss="modal" class="btn btn-primary yesItsTheSame">Yes</button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="AnnotationStatusTemplate">
+
+        <div class="claro">
+            <div id="progress_tab" style="width: 300px; height: 570px;">
+                <div id="progress_image">
+                    <b>Image Progress:</b>
+
+                    <div id="chart_image_progress" style="width: 300px; height: 250px;"></div>
+                </div>
+                <b>Project Progress:</b>
+
+                <div id="chart_project_progress" style="width: 300px; height: 250px;"></div>
+            </div>
+            <div id="distribution_tab" style="width: 300px; height: 570px; display: none;">
+                <div id="distribution_image">
+                    <b>Image Distribution:</b>
+
+                    <div id="chart_image_distribution" style="width: 300px; height: 250px;"></div>
+                </div>
+                <b>Project Distribution:</b>
+
+                <div id="chart_project_distribution" style="width: 300px; height: 250px;"></div>
+            </div>
+            <div id="topfive_tab" style="width: 300px; height: 570px; display: none;">
+                <b>Top Five Annotations:</b>
+
+                <div id="chart_topfive"></div>
+            </div>
+            <div id="summary_tab" style="width: 300px; height: 570px; display: none;">
+                <b>Summary:</b>
+                <ul>
+                    <li class="">Annotation Set Type:</li>
+                    <li class=""><%=annotation_set_type%></li>
+                    <br>
+                    <li class="">Total:</li>
+                    <li class=""><%=total%></li>
+                    <br>
+                    <li class="">Unannotated:</li>
+                    <li class=""><%=unannotated%></li>
+                    <br>
+                    <li class="">Annotated:</li>
+                    <li class=""><%=annotated%></li>
+                    <br>
+                    <ul class="nav-stacked">
+                        <%=annotated_sub%>
+                    </ul>
+                </ul>
+            </div>
+
+            <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn active" id="radio_progress">
+                    Progress
+                </button>
+                <button type="button" class="btn" id="radio_distribution">
+                    Distribution
+                </button>
+                <button type="button" class="btn" id="radio_topfive">
+                    Top 5 Annotated
+                </button>
+                <button type="button" class="btn" id="radio_summary">
+                    Summary
+                </button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="AnnotationStatusSubTemplate">
+        <li class="label label-inverse"><%=sub_label%>:</li>
+        <li class="label"><%=sub_value%></li>
+        <br>
+    </script>
+
+
+
+
+
+    <script type="text/template" id="BreadcrumbTemplate">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+
+                <li><a href="/projects/">Projects</a> <span
+                        class="divider">></span></li>
+                <li><a href="/projects/<%=id%>/"><%= name %></a> <span
+                        class="divider">></span></li>
+                <li class="active">Annotate</li>
+
+            </ul>
+        </div>
+    </script>
+
+    <script type="text/template" id="ThumbnailStripTemplate">
+        <div id="thumbnail-pane">
+            <%=thumbnails%>
+        </div>
+    </script>
+
+    <script type="text/template" id="ThumbnailTemplate">
+        <div class='wrapper' id='<%=thumbnailId%>' data-id='<%=thumbnailId%>' data-web_location='<%=web_location%>'>
+            <div class='description'></div>
+            <img src='<%= thumbnail_location %>' data-src='<%= thumbnail_location %>' alt='image' style="width: 100%; padding-top: 5px">
+            <%= annotation_status %>
+        </div>
+    </script>
+
+    <script type="text/template" id="ImageTemplate">
+        <canvas id="CanvasImage" class="canvas-layers"/>
+        <canvas id="CanvasImage2" class="canvas-layers"/>
+        <img id="Image" class="canvas-layers" src='<%= web_location %>' data-src='<%= web_location %>' alt='image' style="visibility: hidden">
+    </script>
+
+    <script type="text/template" id="StatusTemplate">
+        <span class="badge badge-info" id="<%= image_id %>"
+              style="position: absolute; top: 5%; left: 2%;"><%=status%></span>
+    </script>
+
+    <!-- TODO rename this properly, so we know what we are importing, also work out a better way -->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/classification-tree.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.viewcenter/leaflet.viewcenter.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/leaflet-0.7.2/Leaflet.awesome-markers-2.0.2/dist/leaflet.awesome-markers.js"></script>
+
+
+    <script src="{{ STATIC_URL }}lib/jquery/modernizr.custom.17475.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/catamiUtils.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jpages/js/jPages.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-model.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/point-annotation-model.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}js/backbone-views/whole-image-annotation-model.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/annotationset-model.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-annotate-view-mangroves.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/broadscale-select-view.js"></script>
+    <!--<script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/fine-scale-selector-view.js"></script>-->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/image-annotate-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/thumbnailstrip-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/choose-annotation-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/annotation-status-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/similarity-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jquery.panzoom.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jcanvas.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery.elevatezoom/jquery.elevateZoom-2.5.5.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jquery.autoResizeImages.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/image-segmentation.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/silviomoreto-bootstrap-select/bootstrap-select.js"type="text/javascript"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/chosen/chosen.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery.hotkeys/jquery.hotkeys.js"></script>
+
+    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/OpenLayers/OpenLayers.js"></script>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/OpenLayers/LoadingPanel.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/Map.js"></script>
+
+    <script type="text/javascript">
+
+        var WMS_URL = "{{ WMS_URL }}";
+        var LAYER_PROJECTS = "{{ LAYER_PROJECTS }}";
+        var LAYER_IMAGES = "{{ LAYER_IMAGES }}";
+
+        var imageSegmentation = new ImageSegmentation();
+        var projectId = "{{ project_id }}";
+        var project = new ProjectLite({"id": projectId});
+        var orchestratorView;
+
+        $(document).ready(function () {
+            orchestratorView = new OrchestratorView();
+
+
+
+            /*
+            $('<form class="navbar-form"> \
+                <button id="SimilarImageTabButton" data-toggle="modal" data-target="#SimilarImageModal" type="button" class="btn btn-info navbar-btn">Similar Images</button> \
+                <button type="button" class="btn btn-info navbar-btn" data-toggle="modal" data-target="#StatsModal">Statistics</button> \
+            </form>').appendTo("#bs-example-navbar-collapse-1");
+            */
+        });
+
+    </script>
+
+
+
+
+{% endblock %}

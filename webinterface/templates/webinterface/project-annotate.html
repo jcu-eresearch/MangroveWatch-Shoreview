@@ -1,0 +1,1607 @@
+{% extends "base-topmenu.html" %}
+{% block title %}BenthoBox - Project List {% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/dojo/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/css/elastislide/elastislide.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/css/elastislide/custom.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="{{ STATIC_URL }}lib/silviomoreto-bootstrap-select/bootstrap-select.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.viewcenter/leaflet.viewcenter.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}lib/leaflet-0.7.2/Leaflet.awesome-markers-2.0.2/dist/leaflet.awesome-markers.css" />
+
+    <style>
+        table,th,td
+        {
+            border:1px solid white;
+            text-align: left;
+            padding: 5px;
+            width: 100%;
+        }
+
+        td {
+            width: 25%;
+            /*background-color: lightcoral;*/
+            color:white;
+        }
+
+        td:hover {
+            background-color:#800080;
+            color:green;
+        }
+
+        td a {
+            display:block;
+            width:100%;
+            height: 100%;
+            color:white;
+            text-decoration:none;
+        }
+
+        #AnnotationPanel {
+            overflow: auto;
+        }
+
+    </style>
+
+    <style type="text/css">
+
+    html, body, #ContentContainer, .container-fluid {
+        height: 100%;
+        width: 100%;
+    }
+
+     #ImageViewer {
+        /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+        height: calc(100% - 70px);
+    }
+
+    #ImageCanvasWrapper {
+        position: relative;
+    }
+
+    canvas {
+        position: absolute;
+        width: 100%;
+    }
+
+
+    .image-container-fluid {
+        margin: 0;
+        height: 100%;
+        /* 		    padding: 0px 0; */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .columns {
+        height: 100%;
+    }
+
+    .content-area {
+        /*background: rgba(0,0,0,0);*/
+
+        overflow: auto;
+        height: 100%;
+    }
+
+    .footer {
+        margin-top: -60px;
+        height: 20px;
+    }
+
+    div.wrapper {
+        float: left; /* important */
+        position: relative; /* important(so we can absolutely position the description div */
+    }
+
+    div.description {
+        position: absolute; /* absolute position (so we can position it where we want)*/
+        padding-top: 25%;
+        min-height: 100%;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: auto;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-family: 'helvetica';
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #ImageAppContainer {
+        /* 			height: 800px; */
+    }
+
+    #ImageContainer {
+        position: relative;
+        margin-top: 10px;
+        overflow: hidden;
+
+    }
+
+    #ImageContainer span {
+        position: absolute;
+        margin: 0px;
+    }
+
+    .image {
+        overflow: visible;
+    }
+
+    .canvas-layers { position:absolute; top:0; left:0 }
+
+    /*
+    #Image {
+        overflow: visible;
+        /*display: block;*/
+        /*
+                    margin: 0px;
+                    position: relative;
+        */
+    /*}*/
+
+    .pointAnnotated {
+        -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        min-width: 12px;
+        min-height: 12px;
+        background-color: rgba(20, 237, 24, 0.0);
+        border: 2px solid #fff;
+        border-top-left-radius: 25%;
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+        border-bottom-right-radius: 25%;
+        color: #fff;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .pointNotAnnotated {
+        -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        width: 12px;
+        height: 12px;
+        background-color: rgba(32, 103, 235, 0.1);
+        border: 1px solid #fff;
+    }
+
+    @-webkit-keyframes rotation {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+
+    @-webkit-keyframes pulsate {
+        0% {
+            -webkit-transform: scale(.9, .9);
+            opacity: 1.0;
+        }
+        50% {
+            -webkit-transform: scale(1.1, 1.1);
+            opacity: 1.0;
+        }
+        100% {
+            -webkit-transform: scale(0.9, .9);
+            opacity: 1.0;
+        }
+    }
+
+    @-webkit-keyframes color-pulsate {
+        0% {
+            color: #7886f2;
+            opacity: 1.0;
+        }
+        50% {
+            color: #002d92;
+            opacity: 1.0;
+        }
+        100% {
+            color: #7886f2;
+            opacity: 1.0;
+        }
+    }
+
+    .pointSelected {
+        -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.8), 0px 0px 3px rgba(0, 0, 0, 0.8);
+        -webkit-animation: rotation 2s infinite linear;
+        width: 12px;
+        height: 12px;
+        background-color: rgba(240, 206, 9, 0.1);
+        border: 2px dashed #fff;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    .fineScaleList {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px 0px 14px 0px;
+    }
+
+    .fineScaleItem {
+        list-style-position: outside;
+        /* 		    border-bottom: 2px solid white; */
+        background-color: rgba(245, 236, 211, 1);
+        padding: 5px 5px;
+        font-weight: normal;
+        margin-bottom: 2px;
+    }
+
+    .fineScaleItem:hover {
+        background-color: rgba(208, 212, 243, .75);
+        cursor: pointer;
+    }
+
+    .fineScaleItemSelected {
+        background-color: rgba(208, 212, 243, .75);
+        cursor: pointer;
+    }
+
+    .fineScaleBadge {
+        color: white;
+        background-color: rgba(202, 194, 168, 0.89);
+        padding: 0px 4px 4px 4px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        font-weight: bold;
+    }
+
+    .fineScaleSeperator {
+        background-color: rgba(245, 238, 211, 0);
+        margin-top: -10px;
+        margin-bottom: -5px;
+        padding-left: 20px;
+    }
+
+    .fineScaleLabel {
+        font-weight: 500;
+        font-size: large;
+    }
+
+    .wholeImageList {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px 0px 14px 0px;
+    }
+
+    .wholeImageItem {
+        list-style-position: outside;
+        border-bottom: 1px solid white;
+        background-color: rgba(245, 236, 211, 1);
+        padding: 3px 5px;
+        font-weight: bold;
+    }
+
+    .wholeImageItem:hover {
+        background-color: rgba(208, 212, 243, .75);
+        cursor: pointer;
+    }
+
+    .editable {
+        background-color: rgba(208, 212, 243, .75);
+    }
+
+    .wholeImageHeader {
+        list-style-position: outside;
+        border-bottom: 5px solid #e99c1e;
+        border-bottom-color: white;
+        border-top-color: white;
+        background-color: #ebe0cf;
+        padding: 4px 5px 5px 5px;
+        font-weight: bold;
+    }
+
+    .wholeImageFooter {
+        list-style-position: outside;
+        border-bottom: 2px solid #e99c1e;
+        border-bottom-color: white;
+        border-top-color: white;
+        background-color: rgba(243, 230, 178, 1);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 27px;
+        padding-top: 3px;
+        font-weight: 300;
+    }
+
+    .broadScalePercentage {
+        margin-left: 1px;
+        margin-right: 1px
+    }
+
+    .wholeImageClassLabel {
+        padding-right: auto;
+        margin-left: 1px;
+        margin-right: 1px
+    }
+
+    .broadScaleTools:hover {
+        color: blue;
+
+    }
+
+    .wholeImageLabel {
+        font-weight: 500;
+        font-size: large;
+        display: block;
+    }
+
+    .wholeImageLabelStatus {
+        color: #57d357;
+        padding-left: 5px;
+        text-shadow: 0px 0px 2px #000000;
+
+    }
+
+    .editBroadScaleIndictor {
+        color: #3049ff;
+        text-shadow: 0px 0px 2px rgba(191, 255, 0, 0.8);
+        -webkit-animation: color-pulsate 2s ease-out;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    .broadScaleRemoveButton {
+        color: rgba(192, 192, 192, 1);
+        text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+        padding-left: 3px;
+        padding-right: 3px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .broadScaleRemoveButton:hover {
+        color: red;
+    }
+
+    .addPercentageQualifier {
+        margin-right: 5px;
+    }
+
+    .percentageControl {
+        margin-right: 10px;
+    }
+
+    .broadScaleControlContainer {
+        background-color: rgba(255, 255, 255, 0.76);
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    .AddBroadScaleElement {
+        list-style-position: outside;
+        border-bottom: 1px solid white;
+        background-color: rgba(245, 236, 211, 1);
+        padding: 3px 5px 8px 5px;
+        font-size: large;
+        font-weight: 500;
+    }
+
+    .AddBroadScaleElement:hover {
+        cursor: pointer;
+    }
+
+    .deleteStyle {
+        color: red;
+    }
+
+    .actionConfirmAlert {
+        list-style-position: outside;
+        padding: 3px 5px;
+        font-weight: bold;
+        padding-bottom: 12px;
+        text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+    }
+
+    .alert {
+        margin-bottom: 2px;
+    }
+
+    .wholeImageList a {
+        /* 			color: black; */
+    }
+
+    .BroadScaleEditBox {
+        padding: 0px 5px;
+
+        background-color: rgba(239, 230, 204, 0.05);
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .FineScaleEditBox {
+        padding: 0px 5px;
+
+        background-color: rgba(239, 230, 204, 0.05);
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .AnnotationChooserBox {
+        color: #000000;
+        padding: 0px 5px;
+
+        background-color: rgba(239, 230, 204, 0.05);
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .AnnotationChooserBox disable {
+        color: #b7b7b7;
+        padding: 0px 5px;
+
+        background-color: rgba(239, 230, 204, 0.05);
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+        /* percentage selector */
+    .percentageSelector {
+
+    }
+
+    .percentageSelectorLabel {
+        margin-left: 2px;
+    }
+
+    .percent_none {
+        color: red;
+        background-color: white;
+    }
+
+    .percent_0 {
+        color: white;
+        background-color: #c1c1c1;
+    }
+
+    .percent_10 {
+        color: white;
+        background-color: #a7a7a7;
+    }
+
+    .percent_20 {
+        color: white;
+        background-color: #9b9b9b;
+    }
+
+    .percent_30 {
+        color: white;
+        background-color: #8d8d8d;
+    }
+
+    .percent_40 {
+        color: white;
+        background-color: #858585;
+    }
+
+    .percent_50 {
+        color: white;
+        background-color: #7a7a7a;
+    }
+
+    .percent_60 {
+        color: white;
+        background-color: #6b6b6b;
+    }
+
+    .percent_70 {
+        color: white;
+        background-color: #5b5b5b;
+    }
+
+    .percent_80 {
+        color: white;
+        background-color: #4f4f4f;
+    }
+
+    .percent_90 {
+        color: white;
+        background-color: #3b3b3b;
+    }
+
+    .percent_100 {
+        color: white;
+        background-color: #2c2b2b;
+    }
+
+    .percent_0:hover {
+        color: white;
+        background-color: #38b07e;
+    }
+
+    .percent_10:hover {
+        color: white;
+        background-color: #38b090;
+    }
+
+    .percent_20:hover {
+        color: white;
+        background-color: #38b0a6;
+    }
+
+    .percent_30:hover {
+        color: white;
+        background-color: #38a0b0;
+    }
+
+    .percent_40:hover {
+        color: white;
+        background-color: #3884b0;
+    }
+
+    .percent_50:hover {
+        color: white;
+        background-color: #386ab0;
+    }
+
+    .percent_60:hover {
+        color: white;
+        background-color: #3854b0;
+    }
+
+    .percent_70:hover {
+        color: white;
+        background-color: #3840b0;
+    }
+
+    .percent_80:hover {
+        color: white;
+        background-color: #4238b0;
+    }
+
+    .percent_90:hover {
+        color: white;
+        background-color: #5638b0;
+    }
+
+    .percent_100:hover {
+        color: white;
+        background-color: #7238b0;
+    }
+
+    .percentValue {
+        border: 1px solid white;
+        margin-left: -2px;
+        margin-right: -2px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+        /* toolbar */
+
+    .toolbar {
+        width: 100%;
+        margin: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .toolbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .toolbar a {
+        text-decoration: none;
+    }
+
+    .button-container-div {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .toolbar-entry-wide {
+        min-width: 80px;
+    }
+
+    .toolbar-entry-narrow {
+        float: left;
+        min-width: 40px;
+    }
+
+    .icon-button {
+        padding: 10px 10px;
+        border-radius: 0;
+    }
+
+    .toolbar .active {
+        background-color: #008aaa;
+    }
+
+    .toolbar li {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .toolbar span {
+        display: inline-block;
+        font-size: smaller;
+    }
+
+    .icon-style {
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .icon-shadow {
+        text-shadow: 0px 0px 4px #0088cc;
+    }
+
+    .icon-style-text {
+        color: white;
+        display: block;
+        font-weight: bold;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .icon-style:active {
+        color: #4f68f8;
+    }
+
+    .nav-stacked ul {
+        margin-left: 15px !important;
+    }
+
+    .SimilarThumbnailContainer {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .SimilarSameButton {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    #SimilarNotSameButton {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .SimilarModalButton {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    .SimilarSameLayer {
+        position: absolute;
+        text-align: center;
+        color: #ffffff;
+        top: 25px;
+        left: 50px;
+        text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.5);
+        display: none;
+        /*background-color: rgba(0, 0, 0, .4);*/
+    }
+
+    #ActionButtonPanel {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .redLabel {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        color: white;
+
+        /*Blue*/
+        /*background: rgba(46,151,211,0.8);*/
+
+        /*Orange*/
+        background: rgba(201,39,32,0.8);
+
+        /*Red*/
+        /*background: rgba(201,39,32,0.8);*/
+
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+
+    .orangeLabel {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        color: white;
+
+        /*Blue*/
+        /*background: rgba(46,151,211,0.8);*/
+
+        /*Orange*/
+        background: rgba(241,132,37,0.8);
+
+        /*Red*/
+        /*background: rgba(201,39,32,0.8);*/
+
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+
+    .blueLabel {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        color: white;
+
+        /*Blue*/
+        /*background: rgba(46,151,211,0.8);*/
+
+        /*Orange*/
+        background: rgba(46,151,211,0.8);
+
+        /*Red*/
+        /*background: rgba(201,39,32,0.8);*/
+
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+
+    .redlabel .orangeLabel .blueLabel h4 {
+        /*margin: 0 0 5px;*/
+        /*color: #777;*/
+        color: white;
+    }
+
+    .labelGroup {
+        overflow: auto;
+    }
+
+    </style>
+
+    <div id="load-error-div" class="alert alert-error" style="display: none">
+        <strong>
+            <span id="load-error-message"></span>
+        </strong>
+    </div>
+
+    <div id="ContentContainer" class='row-fluid columns'>
+        <!--
+                <section id="full-width-header" class="row-fluid span12" style="margin-left:0px;">
+                <div id="BreadcrumbContainer"></div>
+            </section>
+        -->
+        <div class="col-md-1">
+            <div id="col-md-12">
+                <div id="ThumbnailStripContainer"></div>
+            </div>
+            <ul id="pagination"></ul>
+        </div>
+
+        <div id="ImageViewer" class="col-md-8"></div>
+
+        <div id="RightPane" class="col-md-3" style="visibility: hidden">
+
+            <ul class="nav nav-tabs">
+                <li id="AnnotationSelectionButton" class="active">
+                    <a href="#AnnotationSelectionTab" data-toggle="tab">Annotation Selection</a>
+                </li>
+
+                <li class="dropdown pull-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      More <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <!--<li id="SimilarImageTabButton"><a href="#" data-toggle="modal" data-target="#SimilarImageModal">Similar Images</a></li>-->
+                      <li><a href="#" data-toggle="modal" data-target="#StatsModal">Charts</a></li>
+                        <!--<li><a href="#">Configure Project</a></li>
+                      <li><a href="#">Share Project</a></li>
+                      <li><a href="#">Export CSV</a></li>-->
+                    </ul>
+                </li>
+                <!--<li id="SimilarImageTabButton"><a href="#SimilarImageTab" data-toggle="tab">Similar Images <span
+                        id="SimilarImageBadge" class="badge badge-info"></span> </a></li>-->
+                <!--<li><a href="#StatsTab" data-toggle="tab">Statistics</a></li>-->
+                <!--<li><a onclick="createBookmark();"> <img src="/static/images/bookmark.jpg" /> </a></li>-->
+                <!--<li><a href="#" onclick="createBookmark();"> Perm URL </a></li>-->
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="AnnotationSelectionTab">
+
+                    <div id="ActionButtonPanel">
+
+                    <div class="btn-group" data-toggle="buttons">
+                        <div id="BroadScaleButtons">
+                            <div class="btn-group-justified">
+                                <label id="BroadScaleAnnotationButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="Broad Scale Annotation">
+                                    <input type="radio" name="options"> BSA
+                                </label>
+                                <label id="BroadScaleQualifierButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="Broad Scale Qualifier">
+                                    <input type="radio" name="options"> BSQ
+                                </label>
+                                <label id="FOVPercentageButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="FOV Percentage">
+                                    <input type="radio" name="options"> FOV %
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="FineScaleButtons">
+                            <div class="btn-group-justified">
+                                <label id="PrimaryAnnotationButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="Primary Annotation">
+                                    <input type="radio" name="options" checked> PA
+                                </label>
+                                <label id="PrimaryQualifierButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="Primary Qualifier">
+                                    <input type="radio" name="options"> PQ
+                                </label>
+                                <label id="SecondaryAnnotationButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="Secondary Annotation">
+                                    <input type="radio" name="options"> SA
+                                </label>
+                                <label id="SecondaryQualifierButton" class="btn btn-default" rel="tooltip"
+                                       data-toggle="tooltip" data-placement="left" title="Secondary Qualifier">
+                                    <input type="radio" name="options"> SQ
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <table id="AnnotationPanel">
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <table id="QualifiersPanel">
+                        <tbody>
+
+                        <tr><td bgColor="#696969"> <a href="#"> Bleached </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Dead </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Storm damage </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Urchin barren </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Iceberg scour </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Veneer </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Epiphyte </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Rhodolith </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Recruits </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Rubbish Concentrated (e.g. dumpsite) </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Rubbish Occasional (e.g. car tyre) </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Rubbish Shipwreck </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Fishery related Gear tracks / marks </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Fishery related Damage to solid epifauna </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Fishery related Discarded / lost gear </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Primary </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Secondary </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> Tertiary </a> </td></tr>
+
+                        </tbody>
+                    </table>
+
+                    <table id="FOVPercentagePanel">
+                        <tbody>
+
+                        <tr><td bgColor="#696969"> <a href="#"> 10% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 20% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 30% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 40% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 50% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 60% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 70% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 80% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 90% </a> </td></tr>
+                        <tr><td bgColor="#696969"> <a href="#"> 100% </a> </td></tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <!--
+                <div class="tab-pane" id="SimilarImageTab">
+                    <div id="ImageSimilarityContainer"></div>
+                </div>
+                -->
+                <!--
+                <div class="tab-pane" id="StatsTab">
+                    <div id="AnnotationStatusContainer"></div>
+                </div>
+                -->
+
+                <div class="modal fade" id="SimilarImageModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span
+                                        aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title">Similar Images</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="ImageSimilarityContainer"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="StatsModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span
+                                        aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title">Project Statistics</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="AnnotationStatusContainer"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div id="similar-points-modal" class="modal hide fade" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Intelligent Points not enabled.</h3>
+            </div>
+            <div class="modal-body">
+                To enable Intelligent Point selection you will need to turn it on in your projects configuration. Please
+                note that turning this on may slow down image loading. We also recommend you use google Chrome when
+                Intelligent Points is enabled.
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button id="configure_project_button" data-dismiss="modal" class="btn btn-primary">Configure Project
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/template" id="ImageSimilarityTemplate">
+        <h3></h3>
+
+        <div class="row-fluid">
+            <%=controls%>
+
+        </div>
+
+        <div style="padding-top: 10px" class="row-fluid">
+            <%=images%>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="SimilaritySelectAllTemplate">
+        <button id="SimilarSameAll" class="btn btn btn-success" type="button"><i class="icon-ok"></i> Yes, apply same
+            labels to all similar images.
+        </button>
+    </script>
+
+    <script type="text/template" id="SimilarityThumbnailTemplate">
+        <!--<a href="#<%= index %>-modal" data-toggle="modal"> <img id="<%= index %>" class="similarThumbnail" src="<%= thumbnail_location %>" style="padding-bottom: 5px;"> </a>-->
+
+        <div id="<%= index %>" class="SimilarThumbnailContainer">
+            <img id="<%= index %>" class="similarThumbnail" src="<%= thumbnail_location %>"
+                 style="padding-bottom: 5px;">
+            <button id="SimilarSameButton<%= index %>" class="btn btn-small btn-success SimilarSameButton" type="button"
+                    title="Yes, this image is the same."><i class="fa fa-check"></i></button>
+            <!--<button id="SimilarNotSameButton" class="btn btn-mini btn-danger" type="button"><i class="icon-remove"></i></button>-->
+            <a href="#<%= index %>-modal" data-toggle="modal" id="SimilarModalButton<%= index %>"
+               class="btn btn-small SimilarModalButton" type="button" title="Take a closer look."><i
+                    class="fa fa-search"></i></a>
+
+            <span id="SimilarSameLayer<%= index %>" class="SimilarSameLayer"><i class="fa fa-check fa-3x"></i></span>
+        </div>
+
+        <!-- Modal -->
+        <div id="<%= index %>-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Copy the same broad scale classification to this image?</h3>
+            </div>
+            <div class="modal-body">
+                <img src="<%= web_location %>">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button id="<%= index %>" data-dismiss="modal" class="btn btn-primary yesItsTheSame">Yes</button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="AnnotationStatusTemplate">
+
+        <div class="claro">
+            <div id="progress_tab" style="width: 300px; height: 570px;">
+                <div id="progress_image">
+                    <b>Image Progress:</b>
+
+                    <div id="chart_image_progress" style="width: 300px; height: 250px;"></div>
+                </div>
+                <b>Project Progress:</b>
+
+                <div id="chart_project_progress" style="width: 300px; height: 250px;"></div>
+            </div>
+            <div id="distribution_tab" style="width: 300px; height: 570px; display: none;">
+                <div id="distribution_image">
+                    <b>Image Distribution:</b>
+
+                    <div id="chart_image_distribution" style="width: 300px; height: 250px;"></div>
+                </div>
+                <b>Project Distribution:</b>
+
+                <div id="chart_project_distribution" style="width: 300px; height: 250px;"></div>
+            </div>
+            <div id="topfive_tab" style="width: 300px; height: 570px; display: none;">
+                <b>Top Five Annotations:</b>
+
+                <div id="chart_topfive"></div>
+            </div>
+            <div id="summary_tab" style="width: 300px; height: 570px; display: none;">
+                <b>Summary:</b>
+                <ul>
+                    <li class="">Annotation Set Type:</li>
+                    <li class=""><%=annotation_set_type%></li>
+                    <br>
+                    <li class="">Total:</li>
+                    <li class=""><%=total%></li>
+                    <br>
+                    <li class="">Unannotated:</li>
+                    <li class=""><%=unannotated%></li>
+                    <br>
+                    <li class="">Annotated:</li>
+                    <li class=""><%=annotated%></li>
+                    <br>
+                    <ul class="nav-stacked">
+                        <%=annotated_sub%>
+                    </ul>
+                </ul>
+            </div>
+
+            <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn active" id="radio_progress">
+                    Progress
+                </button>
+                <button type="button" class="btn" id="radio_distribution">
+                    Distribution
+                </button>
+                <button type="button" class="btn" id="radio_topfive">
+                    Top 5 Annotated
+                </button>
+                <button type="button" class="btn" id="radio_summary">
+                    Summary
+                </button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="AnnotationStatusSubTemplate">
+        <li class="label label-inverse"><%=sub_label%>:</li>
+        <li class="label"><%=sub_value%></li>
+        <br>
+    </script>
+
+    <script type="text/template" id="ImageZoomControlTemplate">
+        <section class="buttons well">
+            <button class="btn btn-small move">Pan</button>
+            <div class="btn-group">
+                <button class="btn zoom-in">Zoom In</button>
+                <button class="btn zoom-out">Zoom Out</button>
+            </div>
+            <input type="range" class="zoom-range">
+            <button class="btn btn-small reset">Reset</button>
+        </section>
+    </script>
+
+    <script type="text/template" id="ImagePointsControlTemplate">
+        <div class="well">
+            <a id="hide_points_button" class="btn">Hide Points (click and hold me)</a>
+            <a id="deselect_points_button" class="btn">Deselect Points</a>
+        </div>
+    </script>
+
+    <script type="text/template" id="ChooseAnnotationTemplate">
+        <div class="FineScaleEditBox">
+            <h4>1. View/Edit Fine Scale Annotation</h4>
+
+            <div class="fine-scale-annotation-selector" id="fine-scale-annotation-selector"></div>
+        </div>
+        <div class="BroadScaleEditBox">
+            <h4>1. Make/Edit Broad Scale Annotations</h4>
+
+            <div class="whole-image-annotation-selector" id="whole-image-annotation-selector"></div>
+        </div>
+        <div class="AnnotationChooserBox">
+            <h4>2. Select the CATAMI CAAB Code</h4>
+
+            <div id="annotation-chooser"></div>
+        </div>
+
+    </script>
+
+    <script type="text/template" id="PointControlBarTemplate">
+        <div class="row toolbar">
+            <div class="button-container-div">
+                <ul>
+                    <a class="icon-button toolbar-entry-wide">
+                        <li id="PanButton" class="">
+                            <i class="icon-move icon-2x icon-style"></i>
+                            <span class="link_title icon-style-text">Pan</span>
+                        </li>
+                    </a>
+                    <li class="toolbar-entry-wide">
+                        <div>
+                            <a class="zoom-out icon-button toolbar-entry-wide"><i
+                                    class="icon-minus-sign icon-2x icon-style"></i></a>
+                            <input type="range" class="zoom-range">
+                            <a class="zoom-in icon-button toolbar-entry-wide"><i
+                                    class="icon-plus-sign icon-2x icon-style"></i></a>
+                        </div>
+                        <span class="link_title icon-style-text">Image Zoom</span>
+                    </li>
+                    <a class="icon-button toolbar-entry-wide reset">
+                        <li class="">
+                            <i class="icon-resize-full icon-2x icon-style"></i>
+                            <span class="link_title icon-style-text">Reset Zoom</span>
+                        </li>
+                    </a>
+                    <a id="hide_points_button" class="icon-button toolbar-entry-wide">
+                        <li class="">
+                            <i class="icon-check-empty icon-2x icon-style"></i>
+                            <span class="link_title icon-style-text">Hide Points</span>
+                        </li>
+                    </a>
+                    <a id="deselect_points_button" class="icon-button toolbar-entry-wide">
+                        <li class="">
+                            <i class="icon-remove-circle icon-2x icon-style"></i>
+                            <span class="link_title icon-style-text">Deselect</span>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="WholeImageControlBarTemplate">
+        <div class="row toolbar">
+            <div class="button-container-div">
+                <ul>
+                    <a class="icon-button toolbar-entry-wide">
+                        <li id="PanButton" class="">
+                            <i class="icon-move icon-2x icon-style"></i>
+                            <span class="link_title icon-style-text">Pan</span>
+                        </li>
+                    </a>
+                    <li class="toolbar-entry-wide">
+                        <div>
+                            <a href="#" class="zoom-out icon-button toolbar-entry-wide"><i
+                                    class="icon-minus-sign icon-2x icon-style"></i></a>
+                            <input type="range" class="zoom-range">
+                            <a href="#" class="zoom-in icon-button toolbar-entry-wide"><i
+                                    class="icon-plus-sign icon-2x icon-style"></i></a>
+                        </div>
+                        <span class="link_title icon-style-text">Image Zoom</span>
+                    </li>
+                    <a href="#" class="icon-button toolbar-entry-wide reset">
+                        <li class="">
+                            <i class="icon-resize-full icon-2x icon-style"></i>
+                            <span class="link_title icon-style-text">Reset Zoom</span>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="WholeImageAnnotationTemplate">
+        <div>
+            <ul id="broad_scale_list_view" class="wholeImageList">
+                <!-- 				<li class="wholeImageHeader"><span>1. Edit Broad Scale Annotations</span></li> -->
+                <%=broadScaleAnnotations%>
+                <a id="add_new_broadscale_annotation">
+                    <li class="AddBroadScaleElement">
+                        <span>Add a new annotation</span>
+                        <span class="pull-right"><i class="icon-plus-sign icon-style icon-shadow"></i></span>
+                    </li>
+                </a>
+                <li id="DeleteBroadScaleConfirm" class="actionConfirmAlert alert alert-danger">
+                    <span><i class="icon-warning-sign"></i> Remove item/s?</span>
+                    <span class="btn btn-small pull-right dismiss_confirmation">No </span>
+                    <span id="confirm_delete" class="btn btn-small btn-danger pull-right">Yes </span>
+                </li>
+                <li id="DeleteAllBroadScaleConfirm" class="actionConfirmAlert alert alert-danger">
+                    <span><i class="icon-warning-sign"></i> Remove all annotations?</span>
+                    <span class="btn btn-small pull-right dismiss_confirmation">No </span>
+                    <span id="confirm_delete_all" class="btn btn-small btn-danger pull-right">Yes</span>
+                </li>
+                <li id="ClearAllBroadScaleConfirm" class="actionConfirmAlert alert alert-danger">
+                    <span><i class="icon-warning-sign"></i> Clear all annotations?</span>
+                    <span class="btn btn-small pull-right dismiss_confirmation">No </span>
+                    <span id="confirm_clear_all" class="btn btn-small btn-danger pull-right">Yes </span>
+                </li>
+                <li id="SetImageUnscorable" class="actionConfirmAlert alert alert-danger">
+                    <span><i class="icon-warning-sign"></i> Set this image unscorable? This will clear all annotations.</span>
+                    <span class="btn btn-small pull-right dismiss_confirmation">No </span>
+                    <span id="confirm_set_unscorable" class="btn btn-small btn-danger pull-right">Yes </span>
+                </li>
+                <li class="wholeImageFooter">
+                    <a id="set_image_unscorable" class="btn btn-mini btn-warning pull-left"><i
+                            class="icon-question"></i> Unscorable</a>
+                    <a id="delete_all_broad_scale" class="btn btn-mini btn-danger pull-right"><i
+                            class="icon-minus-sign-alt"></i> Delete All</a>
+                    <a id="clear_all_broad_scale" class="btn btn-mini btn-danger pull-right"><i
+                            class="icon-refresh"></i> Reset All</a>
+                </li>
+            </ul>
+        </div>
+    </script>
+
+    <script type="text/template" id="BroadScaleItemTemplate">
+        <li class="wholeImageItem" data-model_id="<%=model_id%>">
+
+
+            <a id="delete_selected_annotation" class="pull-right"><i class="icon-trash broadScaleRemoveButton"
+                                                                     data-model_id="<%=model_id%>"></i></a>
+            <span class="wholeImageClassLabel label label-info pull-right"><%=broadScaleClassParent%></span>
+            <span class="broadScalePercentage label label-info pull-right"><%=broadScalePercentage%></span>
+            <span class="broadScaleTools pull-right" data-model_id="<%=model_id%>"><i
+                    class=" fa fa-chevron-circle-down"></i></span>
+            <span class="wholeImageLabel" class="pull-left" data-model_id="<%=model_id%>"><i
+                    class="icon-edit editBroadScaleIndictor pull-left"></i><%=broadScaleClass%></span>
+
+
+            <div class="broadScaleControlContainer" data-model_id="<%=model_id%>">
+
+                <div class="percentageSelector ">
+                    <p class="percentageSelectorLabel ">FOV Coverage: </p>
+                    <span class="percentValue percent_none" data-percentage='-1' data-model_id="<%=model_id%>">--</span>
+                    <span class='percentValue percent_0' data-percentage='0' data-model_id="<%=model_id%>">0</span>
+                    <span class="percentValue percent_10" data-percentage='10' data-model_id="<%=model_id%>">10</span>
+                    <span class="percentValue percent_20" data-percentage='20' data-model_id="<%=model_id%>">20</span>
+                    <span class="percentValue percent_30" data-percentage='30' data-model_id="<%=model_id%>">30</span>
+                    <span class="percentValue percent_40" data-percentage='40' data-model_id="<%=model_id%>">40</span>
+                    <span class="percentValue percent_50" data-percentage='50' data-model_id="<%=model_id%>">50</span>
+                    <span class="percentValue percent_60" data-percentage='60' data-model_id="<%=model_id%>">60</span>
+                    <span class="percentValue percent_70" data-percentage='70' data-model_id="<%=model_id%>">70</span>
+                    <span class="percentValue percent_80" data-percentage='80' data-model_id="<%=model_id%>">80</span>
+                    <span class="percentValue percent_90" data-percentage='90' data-model_id="<%=model_id%>">90</span>
+                    <span class="percentValue percent_100" data-percentage='100'
+                          data-model_id="<%=model_id%>">100</span>
+                </div>
+
+                <div>
+                    <p class="percentageSelectorLabel">Qualifier: </p>
+                    <select id="qualifiers-<%=model_id%>" data-placeholder="Qualifiers"
+                            class="selectpicker qualifiers">
+                        <option value=""></option>
+                        <optgroup label="Natural">
+                            <option>Bleached</option>
+                            <option>Dead</option>
+                            <option>Storm damage</option>
+                            <option>Urchin barren</option>
+                            <option>Iceberg scour</option>
+                            <option>Veneer</option>
+                            <option>Epiphyte</option>
+                            <option>Rhodolith</option>
+                            <option>Recruits</option>
+                        </optgroup>
+                        <optgroup label="Anthropogenic">
+                            <option>Rubbish ­ Concentrated (e.g. dumpsite)</option>
+                            <option>Rubbish ­ Occasional (e.g. car tyre)</option>
+                            <option>Rubbish ­ Shipwreck</option>
+                            <option>Fishery related ­ Gear tracks / marks</option>
+                            <option>Fishery related ­ Damage to solid epifauna</option>
+                            <option>Fishery related ­ Discarded / lost gear</option>
+                        </optgroup>
+                        <optgroup label="Level">
+                            <option>Primary</option>
+                            <option>Secondary</option>
+                            <option>Tertiary</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+            </div>
+        </li>
+    </script>
+
+    <script type="text/template" id="AnnotationPanelTemplate">
+
+    </script>
+
+    <!-- TODO Delete this junk -->
+    <script type="text/template" id="FineScaleAnnotionTemplate">
+        <ul class="fineScaleList">
+            <li id="primarylabel" class="fineScaleItem">
+
+                <span id="fine_scale_label" class="fineScaleLabel" data-model_id="<%=model_id%>"><%=fineScaleClass%></span>
+
+                <span id="add_secondary_annotation" class="label addSecondaryButton pull-right">
+                    <i class="icon-plus-sign"></i> Alternate </span>
+
+                <span id="fine_scale_class_label" class="wholeImageClassLabel label label-info pull-right"><%=fineScaleClassParent%></span>
+
+                <span id="fine_scale_qualifier_label" style="pull-right">
+                    <select id="fine_scale_qualifier_select" data-placeholder="Qualifiers" data-style="btn-mini pull-right"
+                            class="selectpicker qualifiers pull-right">
+                        <option value=""></option>
+                        <optgroup label="Natural">
+                            <option value="Bleached">Bleached</option>
+                            <option value="Dead">Dead</option>
+                            <option value="Storm damage">Storm damage</option>
+                            <option value="Urchin barren">Urchin barren</option>
+                            <option value="Iceberg scour">Iceberg scour</option>
+                            <option value="Veneer">Veneer</option>
+                            <option value="Epiphyte">Epiphyte</option>
+                            <option value="Rhodolith">Rhodolith</option>
+                            <option value="Recruits">Recruits</option>
+                        </optgroup>
+                        <optgroup label="Anthropogenic">
+                            <option value="Rubbish ­ Concentrated (e.g. dumpsite)">Rubbish ­ Concentrated (e.g. dumpsite)</option>
+                            <option value="Rubbish ­ Occasional (e.g. car tyre)">Rubbish ­ Occasional (e.g. car tyre)</option>
+                            <option value="Rubbish ­ Shipwreck">Rubbish ­ Shipwreck</option>
+                            <option value="Fishery related ­ Gear tracks / marks">Fishery related ­ Gear tracks / marks</option>
+                            <option value="Fishery related ­ Damage to solid epifauna">Fishery related ­ Damage to solid epifauna</option>
+                            <option value="Fishery related ­ Discarded / lost gear">Fishery related ­ Discarded / lost gear</option>
+                        </optgroup>
+                        <optgroup label="Level">
+                            <option value="Primary">Primary</option>
+                            <option value="Secondary">Secondary</option>
+                            <option value="Tertiary">Tertiary</option>
+                        </optgroup>
+                    </select>
+                </span>
+
+            </li>
+            <li class="fineScaleSeperator"><span id="fineScaleBadge" class="fineScaleBadge">or</span></li>
+            <li id="secondaryLabel" class="fineScaleItem">
+
+                <span id="fine_scale_label_secondary" class="fineScaleLabel" class="pull-left"
+                      data-model_id="<%=model_id%>"><i class="pull-left"></i><%=fineScaleClassSecondary%></span>
+
+                <span id="remove_secondary_annotation" class="label addSecondaryButton pull-right"><i
+                        class="icon-minus-sign"></i> Alternate</span>
+
+                <span class="wholeImageClassLabel label label-info pull-right"><%=fineScaleClassSecondaryParent%></span>
+
+                <span id="fine_scale_qualifier_label_secondary" class="pull-right">
+                    <select id="fine_scale_qualifier_label_secondary_select" data-placeholder="Qualifiers"
+                            data-style="btn-mini pull-right"
+                            class="selectpicker qualifiers pull-right">
+                        <option value=""></option>
+                        <optgroup label="Natural">
+                            <option value="Bleached">Bleached</option>
+                            <option value="Dead">Dead</option>
+                            <option value="Storm damage">Storm damage</option>
+                            <option value="Urchin barren">Urchin barren</option>
+                            <option value="Iceberg scour">Iceberg scour</option>
+                            <option value="Veneer">Veneer</option>
+                            <option value="Epiphyte">Epiphyte</option>
+                            <option value="Rhodolith">Rhodolith</option>
+                            <option value="Recruits">Recruits</option>
+                        </optgroup>
+                        <optgroup label="Anthropogenic">
+                            <option value="Rubbish ­ Concentrated (e.g. dumpsite)">Rubbish ­ Concentrated (e.g. dumpsite)</option>
+                            <option value="Rubbish ­ Occasional (e.g. car tyre)">Rubbish ­ Occasional (e.g. car tyre)</option>
+                            <option value="Rubbish ­ Shipwreck">Rubbish ­ Shipwreck</option>
+                            <option value="Fishery related ­ Gear tracks / marks">Fishery related ­ Gear tracks / marks</option>
+                            <option value="Fishery related ­ Damage to solid epifauna">Fishery related ­ Damage to solid epifauna</option>
+                            <option value="Fishery related ­ Discarded / lost gear">Fishery related ­ Discarded / lost gear</option>
+                        </optgroup>
+                        <optgroup label="Level">
+                            <option value="Primary">Primary</option>
+                            <option value="Secondary">Secondary</option>
+                            <option value="Tertiary">Tertiary</option>
+                        </optgroup>
+                    </select>
+                </span>
+        </ul>
+    </script>
+
+    <script type="text/template" id="BreadcrumbTemplate">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+
+                <li><a href="/projects/">Projects</a> <span
+                        class="divider">></span></li>
+                <li><a href="/projects/<%=id%>/"><%= name %></a> <span
+                        class="divider">></span></li>
+                <li class="active">Annotate</li>
+
+            </ul>
+        </div>
+    </script>
+
+    <script type="text/template" id="ThumbnailStripTemplate">
+        <div id="thumbnail-pane">
+            <%=thumbnails%>
+        </div>
+    </script>
+
+    <script type="text/template" id="ThumbnailTemplate">
+        <div class='wrapper' id='<%=thumbnailId%>' data-id='<%=thumbnailId%>' data-web_location='<%=web_location%>'>
+            <div class='description'></div>
+            <img src='<%= thumbnail_location %>' data-src='<%= thumbnail_location %>' alt='image' style="width: 100%">
+            <%= annotation_status %>
+        </div>
+    </script>
+
+    <script type="text/template" id="ImageTemplate">
+        <canvas id="CanvasImage" class="canvas-layers"/>
+        <canvas id="CanvasImage2" class="canvas-layers"/>
+        <img id="Image" class="canvas-layers" src='<%= web_location %>' data-src='<%= web_location %>' alt='image' style="visibility: hidden">
+    </script>
+
+    <script type="text/template" id="StatusTemplate">
+        <span class="badge badge-info" id="<%= image_id %>"
+              style="position: absolute; top: 5%; left: 2%;"><%=status%></span>
+    </script>
+
+    <!-- TODO rename this properly, so we know what we are importing, also work out a better way -->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/classification-tree.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/leaflet-0.7.2/leaflet.viewcenter/leaflet.viewcenter.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/leaflet-0.7.2/Leaflet.awesome-markers-2.0.2/dist/leaflet.awesome-markers.js"></script>
+
+
+    <script src="{{ STATIC_URL }}lib/jquery/modernizr.custom.17475.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/catamiUtils.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jpages/js/jPages.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-model.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/point-annotation-model.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}js/backbone-views/whole-image-annotation-model.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/annotationset-model.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/project-annotate-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/broadscale-select-view.js"></script>
+    <!--<script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/fine-scale-selector-view.js"></script>-->
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/image-annotate-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/thumbnailstrip-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/choose-annotation-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/annotation-status-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/backbone-views/similarity-view.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jquery.panzoom.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jcanvas.min.js"></script>
+    <script type="text/javascript"
+            src="{{ STATIC_URL }}lib/jquery.elevatezoom/jquery.elevateZoom-2.5.5.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery/plugins/jquery.autoResizeImages.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/dojo/dojo/dojo.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/image-segmentation.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/silviomoreto-bootstrap-select/bootstrap-select.js"type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+
+
+        var imageSegmentation = new ImageSegmentation();
+        var projectId = "{{ project_id }}";
+        var project = new ProjectLite({"id": projectId});
+
+
+        //TODO: this is a hacky way of applying a late style - think of a better way
+        $(window).ready(function () {
+            $('#ImageAppContainer').css("background-color", "#808080");
+            $('#RightPane').css("visibility", "visible");
+        });
+
+        /*
+         $(window).resize(function() {
+         var height = $('#ImageAppContainer').height();
+         $('#RightPane').css('height', height);
+         });
+         */
+
+        var orchestratorView;
+
+        $(document).ready(function () {
+            //$('#map').height($(window).height());
+            //$('#ImageAppContainer').height($(window).height());
+
+            orchestratorView = new OrchestratorView();
+        });
+
+
+        $("#Image").imagesLoaded(function () {
+
+            var divWidth = $("#ImageAppContainer").width();
+            var divHeight = $("#ImageAppContainer").height();
+
+            var max = (divWidth > divHeight) ? divHeight : divWidth;
+            //$('#Image').autoResizeImages({maxSize: max});
+            //$('#CanvasImage').autoResizeImages({maxSize: max});
+            //$('#LassoLayer').autoResizeImages({maxSize: max});
+
+        });
+
+        /*
+        var map = L.map('ImageViewer', {
+            maxZoom: 24,
+            //minZoom: 2,
+            crs: L.CRS.Simple
+        }).setView([150, 200], 14);
+
+        var imageBounds = [[0, 0], [300, 400]];
+
+        // init ViewCenter plugin
+        var viewCenter = new L.Control.ViewCenter({
+            position: 'topleft',
+            title: 'Fit to image bounds.',
+            forceSeparateButton: true,
+            vcLatLng: imageBounds,
+            vcZoom: 6
+	    });
+        map.addControl(viewCenter);
+
+        var imageUrl = "http://localhost:8000/images/20130516_TurquoiseBay/Turqoise%20Bay%20Deployment/njm_gopro3_20130516143308.JPG"
+
+		L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+		var marker = new L.circleMarker([150, 200], 0, {
+			radius: 100,
+            clickable: true,
+            color: 'red',
+            opacity: 1.0,
+			fillColor: 'red',
+			fillOpacity: 1.0
+		});
+
+        marker.setStyle({fillColor: 'red', color: 'red'});
+
+        marker.addTo(map);
+        marker.on('click', function(e) {
+            var fillColour = e.target.options.fillColor;
+
+            if(fillColour == 'red')
+                e.target.setStyle({fillColor: 'blue', color: 'blue'});
+            else
+                e.target.setStyle({fillColor: 'red', color: 'red'});
+        });
+
+        map.fitBounds(imageBounds, {padding: [0, 0]});
+        */
+
+
+
+    </script>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<layer>
+  <name>annotationset_images</name>
+  <id>LayerInfoImpl--65045aeb:14b5384b03d:-7ffd</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-45fae3b1:13fb24b201d:-436</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--65045aeb:14b5384b03d:-7ffe</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>
