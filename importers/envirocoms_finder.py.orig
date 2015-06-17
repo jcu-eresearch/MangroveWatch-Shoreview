@@ -7,7 +7,6 @@ import django
 import numpy as np
 
 sys.path.append('/home/benthobox/benthobox')
-
 import os
 # Bind to django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "benthobox.settings")
@@ -157,18 +156,18 @@ class EcomsFinder():
                 image_data_instance = dict(date_time=image['timestamp'],
                                            latitude=image['data'][self.mapping_for('Latitude')],
                                            longitude=image['data'][self.mapping_for('Longitude')],
-                                           #depth=image['data'][self.mapping_for('Depth')],
+                                           depth=image['data'][self.mapping_for('Depth')],
                                            image_name=image_name,
                                            image_path=image_api_path,
-                                           #camera_name=image['data'][self.mapping_for('Camera')],
-                                           #camera_angle=image['data'][self.mapping_for('Camera Angle')],
-                                           #temperature=image['data'][self.mapping_for('Temperature')],
-                                           #salinity=image['data'][self.mapping_for('Salinity')],
-                                           #pitch=image['data'][self.mapping_for('Pitch')],
-                                           #roll=image['data'][self.mapping_for('Roll')],
-                                           #yaw=image['data'][self.mapping_for('Yaw')],
+                                           camera_name=image['data'][self.mapping_for('Camera')],
+                                           camera_angle=image['data'][self.mapping_for('Camera Angle')],
+                                           temperature=image['data'][self.mapping_for('Temperature')],
+                                           salinity=image['data'][self.mapping_for('Salinity')],
+                                           pitch=image['data'][self.mapping_for('Pitch')],
+                                           roll=image['data'][self.mapping_for('Roll')],
+                                           yaw=image['data'][self.mapping_for('Yaw')],
                                            altitude=image['data'][self.mapping_for('Altitude')],
-                                           #depth_uncertainty=image['data'][self.mapping_for('Depth Uncertanity')],
+                                           depth_uncertainty=image['data'][self.mapping_for('Depth Uncertanity')],
                                            image_type='envirocoms')
 
             # if we get here then all is valid
@@ -216,7 +215,7 @@ class EcomsFinder():
             print "Campaign %s already exists." % campaigns[0].short_name
             return campaigns[0].id
 
-        campaign = Campaign(short_name=campaign_data['title'][:100],
+        campaign = Campaign(short_name=campaign_data['title'],
                             date_start=date_start,
                             date_end=date_end,
                             associated_researchers='',
@@ -247,7 +246,7 @@ class EcomsFinder():
 
         deployment = Deployment(start_time_stamp=start_time_stamp,
                                 end_time_stamp=end_time_stamp,
-                                short_name=deployment_data['title'][:100],
+                                short_name=deployment_data['title'],
                                 mission_aim=deployment_data['description'],
                                 type="SVAM",
                                 operator="",
@@ -316,7 +315,6 @@ class EcomsFinder():
                               )
                 image.save()
 
-                """
                 self.write_measurement(image, 'depth', 'm', image_data_dict['depth'])
                 self.write_measurement(image, 'depth_uncertainty', 'm', image_data_dict['depth_uncertainty'])
                 self.write_measurement(image, 'temperature', 'cel', image_data_dict['temperature'])
@@ -331,7 +329,6 @@ class EcomsFinder():
                 camera = Camera(**camera_data_dict)
                 camera.image = image
                 camera.save()
-                """
 
             except django.db.utils.IntegrityError:
                 print "Skipping %s, it already exists." % image_data_dict['image_name']
@@ -349,18 +346,18 @@ class EcomsFinder():
             image_data_instance = dict(date_time=image['timestamp'],
                                        latitude=image['data'][self.mapping_for('Latitude')],
                                        longitude=image['data'][self.mapping_for('Longitude')],
-                                       #depth=image['data'][self.mapping_for('Depth')],
+                                       depth=image['data'][self.mapping_for('Depth')],
                                        image_name=image_name,
                                        image_path=image_api_path,
-                                       #camera_name=image['data'][self.mapping_for('Camera')],
-                                       #camera_angle=image['data'][self.mapping_for('Camera Angle')],
-                                       #temperature=image['data'][self.mapping_for('Temperature')],
-                                       #salinity=image['data'][self.mapping_for('Salinity')],
-                                       #pitch=image['data'][self.mapping_for('Pitch')],
-                                       #roll=image['data'][self.mapping_for('Roll')],
-                                       #yaw=image['data'][self.mapping_for('Yaw')],
+                                       camera_name=image['data'][self.mapping_for('Camera')],
+                                       camera_angle=image['data'][self.mapping_for('Camera Angle')],
+                                       temperature=image['data'][self.mapping_for('Temperature')],
+                                       salinity=image['data'][self.mapping_for('Salinity')],
+                                       pitch=image['data'][self.mapping_for('Pitch')],
+                                       roll=image['data'][self.mapping_for('Roll')],
+                                       yaw=image['data'][self.mapping_for('Yaw')],
                                        altitude=image['data'][self.mapping_for('Altitude')],
-                                       #depth_uncertainty=image['data'][self.mapping_for('Depth Uncertanity')],
+                                       depth_uncertainty=image['data'][self.mapping_for('Depth Uncertanity')],
                                        image_type='envirocoms')
             image_data.append(image_data_instance)
 
@@ -381,7 +378,7 @@ class EcomsFinder():
             # somehow we got here after all that validation. have to abort. something bad has happened.
             return None
 
-        #depth_data_temp = []
+        depth_data_temp = []
         latitude_data_temp = []
         longitude_data_temp = []
         for im in image_data:
@@ -389,10 +386,10 @@ class EcomsFinder():
                 latitude_data_temp.append(float(im['latitude']))
             if im['longitude'] is not None and str(im['longitude']) != 'None':
                 longitude_data_temp.append(float(im['longitude']))
-            #if im['depth'] is not None and str(im['depth']) != 'None':
-            #    depth_data_temp.append(float(im['depth']))
+            if im['depth'] is not None and str(im['depth']) != 'None':
+                depth_data_temp.append(float(im['depth']))
 
-        #depth_array = np.array(depth_data_temp, dtype=float)
+        depth_array = np.array(depth_data_temp, dtype=float)
         latitude_array = np.array(latitude_data_temp, dtype=float)
         longitude_array = np.array(longitude_data_temp, dtype=float)
 
@@ -410,8 +407,8 @@ class EcomsFinder():
         transect_shape = bounding_polygon
         start_time_stamp = first_valid_image['date_time']
         end_time_stamp = image_data[-1]['date_time']
-        min_depth = 0 #str(depth_array.min())
-        max_depth = 0 #str(depth_array.max())
+        min_depth = str(depth_array.min())
+        max_depth = str(depth_array.max())
 
         return start_position, end_position, transect_shape, start_time_stamp, end_time_stamp, min_depth, max_depth
 
@@ -419,19 +416,12 @@ def main():
     """
         Main function.
     """
-    '''
-    environcoms_url = "http://144.6.22d6.206/ecoms/api/user_v1"
+
+    environcoms_url = "http://144.6.226.206/ecoms/api/user_v1"
     username = 'tjeu0nvs7r0ck4sm2ndb18d316'
     password = '70m3jrus8gbv56v14jkqv0nvd'
     organisation_id = 8
     collection_type = 1
-    '''
-
-    environcoms_url = "http://tdh-envirocoms-1.hpc.jcu.edu.au/ecoms/api/user_v1"
-    username = 'donjiud97hs44lrjgp4akodg26'
-    password = 'mrdvijchhp4c63ra33uslpdkf6'
-    organisation_id = 9
-    collection_type = 3
 
     if not environcoms_url:
         print 'ERROR: Exiting because no URL specified.'
