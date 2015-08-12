@@ -19,20 +19,41 @@ Developed with funding from the ANDS MODC project
 Clone the repo
 
 	git clone https://github.com/jcu-eresearch/MangroveWatch-Shoreview.git
-	
+
 Make a virtualenv
 
 	cd MangroveWatch-Shoreview
 	virtualenv shoreview
-	
+
+
+------
+**If using Fish shell use virtualfish : **
+
+* https://github.com/adambrenecki/virtualfish/
+* https://virtualfish.readthedocs.org/en/latest/usage.html#commands
+
+
+	vf new shoreview
+	vf activate shoreview
+
+or with plugins activated
+
+	mkvirtualenv shoreview
+	workon shoreview
+
+
+-----
+
+**Otherwise using bash-compliant : **
+
 Activate the virtualenv
-	
+
 	source shoreview/bin/activate
-	
+
 Install libraries from `requirements.txt`
 
 	pip install -r requirements.txt
-	
+
 
 
 ## History
