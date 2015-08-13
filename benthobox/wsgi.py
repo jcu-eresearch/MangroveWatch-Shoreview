@@ -16,7 +16,7 @@ framework.
 import os
 import sys
 
-sys.path.insert(0, '/home/benthobox/benthobox')
+sys.path.insert(0, '/home/benthobox/MangroveWatch-Shoreview')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "benthobox.settings")
 
