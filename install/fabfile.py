@@ -38,14 +38,15 @@ http://{hostname}/geoserver
 
 
 
+
 from fabric.api import *
 from fabric.colors import red, green, magenta
 from cuisine import *
 import cuisine
 
 
-GIT_REPO=""
-BENTHOBOX_HOME="/home/benthobox/benthobox"
+GIT_REPO="git@github.com:jcu-eresearch/MangroveWatch-Shoreview.git"
+BENTHOBOX_HOME="/home/benthobox/MangroveWatch-Shoreview"
 HOSTNAME=""
 IMPORT_PATH="/home/benthobox/data"
 STATIC_ROOT="/home/benthobox/static"
@@ -95,7 +96,7 @@ def setup_packages():
     #package_ensure("mod_wsgi")
     package_ensure("python-pip")
     package_ensure("libjpeg-turbo-devel")
-    package_ensure("java-1.7.0-openjdk")
+    package_ensure( "java-1.7.0-openjdk")
     package_ensure("gcc")
 
 
@@ -461,4 +462,16 @@ def clean():
             user_remove("benthobox")
 
 
+def vagrant():
+    "Using Vagrant for development testing."
+    env.user = 'vagrant'
+    env.hosts = ['127.0.0.1:2222']
 
+    # Check vagrant machine status and power it up if off
+    status = cuisine.run_local('vagrant status | grep default')
+    if 'running' in status:
+        puts('Vagrant already up.')
+    else:
+        puts("Vagrant VM powered off so starting...")
+        cuisine.run_local('vagrant up')
+        puts("Vagrant up!")

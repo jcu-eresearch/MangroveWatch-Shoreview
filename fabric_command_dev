@@ -1,7 +1,0 @@
-fab ­H ​118.138.241.54​​:​​22​ -​­u ec2-user​ deploy:​​benthobox​,​fabric,​mangrovewatch-shoreview​​,git@github.com:jcu-eresearch/MangroveWatch-Shoreview.git
-
-
-fab -H​ 118.138.241.54:22​­ -u ec2-user​ deploy:benthobox, fabricfornow​, 118.138.241.54, git@github.com:jcu-eresearch/MangroveWatch-Shoreview.gitt
-
-
-fab -H​ 118.138.241.54​­ -u ec2-user​ deploy:benthobox, ‘fabricfornow​‘, 118.138.241.54, git@github.com:jcu-eresearch/MangroveWatch-Shoreview.git
