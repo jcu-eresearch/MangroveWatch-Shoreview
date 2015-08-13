@@ -197,7 +197,7 @@ def configure_geoserver(db_username, db_password):
         sudo('sed -i \'1aJAVA_HOME=/usr/lib/jvm/jre-1.7.0\' geoserver-2.7.0/bin/shutdown.sh')
         sudo('sed -i \'2aGEOSERVER_HOME=/home/benthobox/geoserver-2.7.0\' geoserver-2.7.0/bin/shutdown.sh')
 
-        sudo('cp -r /home/benthobox/benthobox/install/geoserver-config/benthobox /home/benthobox/geoserver-2.7.0/data_dir/workspaces/')
+        sudo('cp -r /home/benthobox/MangroveWatch-Shoreview/install/geoserver-config/benthobox /home/benthobox/geoserver-2.7.0/data_dir/workspaces/')
 
         sudo('sed -i "s@the_username@%s@g" /home/benthobox/geoserver-2.7.0/data_dir/workspaces/benthobox/catamidb/datastore.xml' % db_username)
         sudo('sed -i "s@the_password@%s@g" /home/benthobox/geoserver-2.7.0/data_dir/workspaces/benthobox/catamidb/datastore.xml' % db_password)
@@ -210,11 +210,11 @@ def configure_geoserver(db_username, db_password):
 
 
 def configure_thumbor():
-    sudo('cp /home/benthobox/benthobox/install/thumbor.conf /home/benthobox/data/thumbnails/')
+    sudo('cp /home/benthobox/MangroveWatch-Shoreview/install/thumbor.conf /home/benthobox/data/thumbnails/')
 
 
 def start_thumbor():
-    sudo('thumbor -c /home/benthobox/data/thumbnails/thumbor.conf > /home/benthobox/benthobox/log/thumbor.log')
+    sudo('thumbor -c /home/benthobox/data/thumbnails/thumbor.conf > /home/benthobox/MangroveWatch-Shoreview/log/thumbor.log')
 
 
 def stop_thumbor():
@@ -222,8 +222,8 @@ def stop_thumbor():
 
 
 def start_gunicorn():
-    with cd('/home/benthobox/benthobox'):
-        sudo('gunicorn --workers=5 --env DJANGO_SETTINGS_MODULE=benthobox.settings benthobox.wsgi > /home/benthobox/benthobox/log/benthobox.log')
+    with cd('/home/benthobox/MangroveWatch-Shoreview'):
+        sudo('gunicorn --workers=5 --env DJANGO_SETTINGS_MODULE=benthobox.settings benthobox.wsgi > /home/benthobox/MangroveWatch-Shoreview/log/benthobox.log')
 
 
 def stop_gunicorn():
