@@ -2,9 +2,13 @@
 13.08.2015
 fab -u vagrant deploy:benthobox,benthobox,mangrovewatch-shoreview,https://github.com/jcu-eresearch/MangroveWatch-Shoreview.git,~/,~/
 
+
+Relevant strings :
 127.0.0.1:2222
 'benthobox'
 'vagrant'
+
+db password : qwer789ASDF456zxcv123@{0}@g
 
 fab -H​ 118.138.241.54 -u ec2-user deploy:benthobox, ‘fabricfornow​‘, 118.138.241.54, git@github.com:jcu-eresearch/MangroveWatch-Shoreview.git
 

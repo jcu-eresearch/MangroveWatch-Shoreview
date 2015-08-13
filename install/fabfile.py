@@ -159,7 +159,7 @@ def configure_benthobox(db_username, db_password, git_repo):
 
             run('chown -R benthobox:benthobox /home/benthobox')
 
-    with cd('/home/benthobox/benthobox'):
+    with cd('/home/benthobox/MangroveWatch-Shoreview'):
 
         with settings(warn_only=True):
             sudo('pip install -r requirements.txt')
