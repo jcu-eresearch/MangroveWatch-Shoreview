@@ -287,6 +287,15 @@ def configure_nginx(ssl_certificate_location='/etc/ssl/certs/cacert.pem', ssl_ce
     |   ssl_certificate_key ''' + ssl_certificate_key_location + ''';
     |   server_tokens off;
     |
+    |   # Generated from https://mozilla.github.io/server-side-tls/ssl-config-generator/
+    |   ssl_session_timeout 1d;
+    |   ssl_session_cache shared:SSL:50m;
+    |   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    |   ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:ECDHE-RSA-DES-CBC3-SHA:ECDHE-ECDSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
+    |   ssl_prefer_server_ciphers on;
+    |   ##requires 'openssl dhparam -out /etc/nginx/ssl/dhparam.pem 4096' to be executed##
+    |   ssl_dhparam ssl/dhparam.pem;
+    |
     |   location /splash {
     |       proxy_pass http://127.0.0.1:8000/splash;
     |       proxy_redirect off;
